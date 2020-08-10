@@ -151,6 +151,9 @@
   display: block;
   clear: both;
 }
+* {
+  color: #292c33;
+}
 .wrapper {
   width: 1200px;
   margin: 0 auto;
@@ -169,7 +172,6 @@ input[type="number"] {
   box-sizing: border-box;
   border: 1px solid #292c33;
   border-radius: 4px;
-  color: #292c33;
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
@@ -191,7 +193,6 @@ button.btn {
   height: 40px;
   padding: 0 15px;
   margin: 0 20px;
-  color: #292c33;
   font-size: 16px;
   font-weight: 400;
   line-height: 40px;
@@ -233,7 +234,6 @@ button.btn.sub {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: #292c33;
   font-size: 28px;
 }
 #header .btn-area {
@@ -263,7 +263,6 @@ button.btn.sub {
   margin: 0 30px;
 }
 #footer ul.agree li a {
-  color: #292c33;
   text-decoration: none;
 }
 #footer address {

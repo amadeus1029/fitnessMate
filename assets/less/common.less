@@ -4,6 +4,10 @@
 @import "import/variable.less";
 @import "import/mixin.less";
 
+* {
+  color: @color-gray;
+}
+
 //all page start with wrapper
 .wrapper {
   width: 1200px;
@@ -23,7 +27,6 @@ input[type="number"] {
   box-sizing: border-box;
   border: 1px solid @color-gray;
   border-radius: 4px;
-  color: @color-gray;
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
@@ -44,7 +47,6 @@ button.btn {
   height: 40px;
   padding: 0 15px;
   margin: 0 20px;
-  color: @color-gray;
   font-size: 16px;
   font-weight: 400;
   line-height: 40px;
@@ -88,7 +90,6 @@ button.btn {
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      color: @color-gray;
       font-size: 28px;
     }
   }
@@ -123,7 +124,6 @@ button.btn {
       display: inline-block;
       margin: 0 30px;
       a{
-        color: @color-gray;
         text-decoration: none;
       }
     }
