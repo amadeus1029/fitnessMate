@@ -1,0 +1,155 @@
+@charset "UTF-8";
+@import "import/colorset.less";
+@import "import/modal.less";
+@import "import/variable.less";
+@import "import/mixin.less";
+
+//all page start with wrapper
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  @media @extra-small {
+    width: 360px;
+  }
+}
+
+//input with icon
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  display: block;
+  width: 300px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid @color-gray;
+  border-radius: 4px;
+  color: @color-gray;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+
+//normal btn
+button.btn {
+  display: block;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid @color-gray;
+  min-width: 100px;
+  height: 40px;
+  padding: 0 15px;
+  margin: 0 20px;
+  color: @color-gray;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  &.main {
+    color: @color-main;
+    border: 1px solid @color-main;
+  }
+  &.sub {
+    color: @color-sub;
+    border: 1px solid @color-sub;
+  }
+}
+
+
+
+//header
+#header {
+  position: fixed;
+  padding: 15px 0;
+  width: 100%;
+  h1.logo {
+    float: left;
+    margin-right: 150px;
+    a {
+      display: block;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  a.search-link {
+    display: block;
+    float: left;
+    height: 50px;
+    position: relative;
+    i {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: @color-gray;
+      font-size: 28px;
+    }
+  }
+  .btn-area {
+    float: right;
+    height: 50px;
+    button.btn {
+      float: left;
+      margin-top: 5px;
+      &:first-of-type {
+        margin-right: 20px;
+      }
+    }
+  }
+
+}
+
+//container
+#container {
+  padding-top: 80px;
+}
+
+//footer
+
+#footer {
+  padding: 40px 0;
+  background-color: #f0f2f7;
+  ul.agree {
+    text-align: center;
+    margin-bottom: 40px;
+    li {
+      display: inline-block;
+      margin: 0 30px;
+      a{
+        color: @color-gray;
+        text-decoration: none;
+      }
+    }
+  }
+  address {
+    font-style: normal;
+    p {
+      margin-bottom: 15px;
+      text-align: center;
+      span {
+        margin-right: 15px;
+        position: relative;
+        &:not(:nth-of-type(4)):after {
+          content:'';
+          display:block;
+          width:1px;
+          height:13px;
+          background:#999;
+          position:absolute;
+          right:-10px;
+          top:7px;
+        }
+      }
+    }
+  }
+  p.right {
+    text-align: center;
+  }
+}
