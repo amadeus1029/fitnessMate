@@ -45,21 +45,49 @@
     <!-- header가 필요한 페이지에서 사용 -->
 
     <div id="container">
-        <ul class="search-condition">
-            <li class="local">
-                <h3 class="title"></h3>
-
-            </li>
-            <li class="gender">
-
-            </li>
-            <li class="">
-
-            </li>
-            <li>
-
-            </li>
-        </ul>
+        <div class="wrapper">
+            <ul class="search-condition clearfix">
+                <li class="local">
+                    <h3 class="title">지역</h3>
+                    <select>
+                        <option selected>전체</option>
+                        <option>서울특별시</option>
+                        <option>부산광역시</option>
+                        <option>광주강역시</option>
+                        <option>경기도</option>
+                    </select>
+                    <select>
+                        <option selected>전체</option>
+                        <option>송파구</option>
+                        <option>구로구</option>
+                        <option>서초구</option>
+                        <option>영구</option>
+                    </select>
+                    <select>
+                        <option selected>전체</option>
+                        <option>송내동</option>
+                        <option>가리봉동</option>
+                        <option>홍길동</option>
+                    </select>
+                </li>
+                <li class="gender">
+                    <h3 class="title">성별</h3>
+                </li>
+                <li class="field">
+                    <h3 class="title">전문분야</h3>
+                    <select>
+                        <option selected>다이어트</option>
+                        <option>재활</option>
+                        <option>기초체력 향상</option>
+                        <option>근력 향상</option>
+                    </select>
+                </li>
+                <li class="keyword">
+                    <h3 class="title">검색어</h3>
+                    <input type="text" placeholder="검색어를 입력해주세요">
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
