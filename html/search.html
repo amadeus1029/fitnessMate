@@ -45,49 +45,88 @@
     <!-- header가 필요한 페이지에서 사용 -->
 
     <div id="container">
+        <div class="test-background"style="background-color: #008526;height: 350px;">
+        </div>
         <div class="wrapper">
-            <ul class="search-condition clearfix">
-                <li class="local">
-                    <h3 class="title">지역</h3>
-                    <select>
-                        <option selected>전체</option>
-                        <option>서울특별시</option>
-                        <option>부산광역시</option>
-                        <option>광주강역시</option>
-                        <option>경기도</option>
-                    </select>
-                    <select>
-                        <option selected>전체</option>
-                        <option>송파구</option>
-                        <option>구로구</option>
-                        <option>서초구</option>
-                        <option>영구</option>
-                    </select>
-                    <select>
-                        <option selected>전체</option>
-                        <option>송내동</option>
-                        <option>가리봉동</option>
-                        <option>홍길동</option>
-                    </select>
-                </li>
-                <li class="gender">
-                    <h3 class="title">성별</h3>
-                </li>
-                <li class="field">
-                    <h3 class="title">전문분야</h3>
-                    <select>
-                        <option selected>다이어트</option>
-                        <option>재활</option>
-                        <option>기초체력 향상</option>
-                        <option>근력 향상</option>
-                    </select>
-                </li>
-                <li class="keyword">
-                    <h3 class="title">검색어</h3>
-                    <input type="text" placeholder="검색어를 입력해주세요">
-                </li>
-            </ul>
+            <form id="searchKeywordForm">
+                <ul class="search-condition clearfix">
+
+                    <li class="local clearfix">
+                        <h3 class="title">지역</h3>
+                        <select>
+                            <option selected>전체</option>
+                            <option>서울특별시</option>
+                            <option>부산광역시</option>
+                            <option>광주강역시</option>
+                            <option>경기도</option>
+                        </select>
+                        <select>
+                            <option selected>전체</option>
+                            <option>송파구</option>
+                            <option>구로구</option>
+                            <option>서초구</option>
+                            <option>영구</option>
+                        </select>
+                        <select>
+                            <option selected>전체</option>
+                            <option>송내동</option>
+                            <option>가리봉동</option>
+                            <option>홍길동</option>
+                        </select>
+                    </li>
+                    <li class="gender">
+                        <h3 class="title">성별</h3>
+                        <div class="radio-wrapper clearfix">
+                            <input type="radio" id="genderMale" name="gender" value="male" checked>
+                            <label for="genderMale">남성</label>
+                            <input type="radio" id="genderFemale" name="gender" value="female">
+                            <label for="genderFemale">여성</label>
+                        </div>
+                    </li>
+                    <li class="field">
+                        <h3 class="title">전문분야</h3>
+                        <select>
+                            <option selected>다이어트</option>
+                            <option>재활</option>
+                            <option>기초체력 향상</option>
+                            <option>근력 향상</option>
+                        </select>
+                    </li>
+                    <li class="keyword">
+                        <h3 class="title">검색어</h3>
+                        <input type="text" placeholder="검색어를 입력해주세요">
+                    </li>
+                </ul>
+                <button type="submit" class="btn">검색</button>
+            </form>
         </div>
     </div>
+    <footer id="footer">
+        <div class="wrapper">
+            <ul class="agree clearfix">
+                <li><a href="#none">개인정보처리방침</a></li>
+                <li><a href="#none">이용약관</a></li>
+                <li><a href="#none">이메일무단수집거부</a></li>
+                <li><a href="#none">뉴스레터신청</a></li>
+                <li><a href="#none">사이트맵</a></li>
+            </ul>
+            <address>
+                <p>
+                    <span>피트니스메이트(주)</span>
+                    <span>사업자 등록번호 231-81-24552</span>
+                    <span>대표이사 황예지, 김주혜</span>
+                    <span>주소 서울특별시 동대문구 천호대로 26 (신설동) 효정빌딩</span>
+                </p>
+                <p>
+                    <span class="on">제품관련 고객상담 080-000-0000</span>
+                    <span class="on">웹사이트문의 02-2222-2222</span>
+                    <span>상담시간 평일 09:00~17:30(토, 일요일, 공휴일 휴무)</span>
+                    <span>개인정보 관리책임자 이웅희</span>
+                </p>
+            </address>
+            <p class="right"><span>COPYRIGHT 하이미디어 풀스택과정 C팀.</span> ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+    <!-- footer가 필요한 페이지에서 사용 -->
 </body>
 </html>

@@ -168,7 +168,7 @@ input[type="password"],
 input[type="number"],
 select {
   display: block;
-  width: 300px;
+  width: 240px;
   height: 30px;
   margin: 0 0 15px;
   box-sizing: border-box;
@@ -216,9 +216,21 @@ button.btn.sub {
   border: 1px solid #008526;
 }
 h3.title {
+  font-size: 20px;
   margin: 0 0 10px;
   font-weight: 700;
-  font-size: 20px;
+}
+.radio-wrapper input[type='radio'] {
+  cursor: pointer;
+}
+.radio-wrapper label {
+  padding: 0 10px 0 5px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.radio-wrapper input[type='radio']:checked + label {
+  font-weight: 700;
 }
 #header {
   position: fixed;
