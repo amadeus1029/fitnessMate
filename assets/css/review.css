@@ -10,9 +10,20 @@ border: 1px solid #292c33;
 min-width: 100px;
 height: 40px;
 padding: 0 15px;
-margin: 10px 5px 0px 5px;
+margin: 10px 5px 10px 5px;
 font-size: 16px;
 font-weight: 400;
 line-height: 40px;
 text-align: center;
 cursor: pointer;}
+
+li{ border-top:1px solid #cc2121;
+    padding:20px 0px;}
+
+.userProfile{display: inline-block; height: 50px; }
+.userProfile-name{
+    padding:0px 500px 0px 0px;
+    display: inline-block; 
+    width: 100px;}
+
+.userProfile-star{display: inline-block; width: 100px;}
