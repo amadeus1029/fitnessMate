@@ -211,6 +211,11 @@ button.btn.sub {
   position: fixed;
   padding: 15px 0;
   width: 100%;
+  z-index: 2;
+  -webkit-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  background-color: #fff;
 }
 #header h1.logo {
   float: left;
@@ -249,6 +254,11 @@ button.btn.sub {
 }
 #container {
   padding-top: 80px;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 #footer {
   padding: 40px 0;

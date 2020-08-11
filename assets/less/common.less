@@ -69,6 +69,12 @@ button.btn {
   position: fixed;
   padding: 15px 0;
   width: 100%;
+  //사파리 z-index 버그
+  z-index: 2;
+  -webkit-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  background-color: #fff;
   h1.logo {
     float: left;
     margin-right: 150px;
@@ -110,6 +116,12 @@ button.btn {
 //container
 #container {
   padding-top: 80px;
+  position: relative;
+  //사파리 z-index 버그
+  z-index: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 //footer

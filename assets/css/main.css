@@ -153,11 +153,16 @@
 }
 #mainBanner {
   overflow: hidden;
+  position: relative;
 }
 #mainBanner .swiper-wrapper {
   position: relative;
 }
 #mainBanner .swiper-wrapper .swiper-slide {
+  z-index: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   height: 500px;
   background-position: center center;
   background-size: cover;
