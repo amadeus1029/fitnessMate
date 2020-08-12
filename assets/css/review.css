@@ -20,7 +20,7 @@ cursor: pointer;}
 .review-line{ border-top:1px solid #cc2121;
     padding:20px 0px;}
 
-.userProfile{display: inline-block; height: 50px; }
+.userProfile{display: inline-block; height: 50px; width:800px;}
 .userProfile-name{
     padding:0px 500px 0px 0px;
     display: inline-block; 
