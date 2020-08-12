@@ -91,7 +91,18 @@
                         </span>
                     </div>
                    
-                        <img class="review-imgSize" src='../assets/image/unnamed.jpg');>
+                        <img class="review-imgSize" onclick="showModal" src='../assets/image/unnamed.jpg');>
+
+                        <div class="modal-layer" id="testModal">
+                            <div class="modal-wrapper">
+                                <p>테스트 모달입니다</p>
+                            </div>
+                            <div class="modal-btn-area">
+                                <button type="button" class="modal-cancel">취소</button>
+                                <button type="button" class="modal-confirm">확인</button>
+                            </div>
+                        </div>
+                        
                         <img class="review-imgSize" src='../assets/image/unnamed.jpg');>
                         <img class="review-imgSize" src='../assets/image/unnamed.jpg');>
 
@@ -232,6 +243,16 @@
     </footer>
     <!-- footer가 필요한 페이지에서 사용 -->
 
+    <script type="text/javascript">
+        var swiper = new Swiper('#mainBanner', {
+            loop: true,
+            navigation: false,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            }
+        });
+    </script>
 
 
 
