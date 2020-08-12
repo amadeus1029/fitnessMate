@@ -21,72 +21,93 @@
     <!-- slide -->
     <link href="../assets/js/swiper-4.2.6/dist/css/swiper.min.css" rel="stylesheet">
     <script src="../assets/js/swiper-4.2.6/dist/js/swiper.min.js"></script>
-    
+
     <!-- 해당 페이지 css -->
     <link rel="stylesheet" href="../assets/css/mypage.css">
-    
-	<style>
-	
 
-	#container{
-	    margin-left: 350px;
-	    width: 1200px;
-	}
-	div[class="title"] {
-	    padding-top: 30px;
-	    text-align: center;
-	    font-weight: 600;
-	    font-size: 30px;
-	    width: 1200px;
-	    height: 60px;
-	}
-	#container form table{
-	    margin: 0px 50px 25px 50px;
-	    width: 1100px;   
-	}
-	#container form table tbody td{
-	    border: 1px solid #292c33;
-	    height: 130px;
-	    font-size: 13px;
-	    line-height: 120%;
-	}
-	#container form table tbody td span{
-	    font-size: 15px;
-	    font-weight: 600;
-	    line-height: 180%;
-	}
-	#container form table thead th{
-	    border: 1px solid #292c33;
-	    background-color: #d8d8d8;
-	    width: 150px;
-	    height: 30px;
-	    font-weight: 700;
-	}
-	#container form table th,td{
-	    padding: 10px 10px 0px 10px;
-	
-	}
-	#container form table tbody td button {
-	    float: right;
-	    visibility: hidden;
-	}
-	#container form table tbody td:hover button {
-	    background-color: white;
-	    border-color: white;
-	    color: #292c33;
-	    visibility: visible;
-	}
-	#container #btn_prev,#btn_next{
-	    margin: 0px 50px 25px 50px;
-	}
-	#container #btn_next {
-	    float: right;
-	}
-	
-	
-	</style>
+    <style>
 
-	<title>write record</title>
+
+        #container {
+            margin-left: 350px;
+            width: 1200px;
+        }
+
+        div[class="title"] {
+            padding-top: 30px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 30px;
+            width: 1200px;
+            height: 60px;
+        }
+
+        #container form table {
+            margin: 0px 50px 25px 50px;
+            width: 1100px;
+        }
+
+        #container form table tbody td {
+            border: 1px solid #292c33;
+            height: 130px;
+            font-size: 13px;
+            line-height: 120%;
+        }
+
+        #container form table tbody td span {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 180%;
+        }
+
+        #container form table thead th {
+            border: 1px solid #292c33;
+            background-color: #d8d8d8;
+            width: 150px;
+            height: 30px;
+            font-weight: 700;
+        }
+
+        #container form table th, td {
+            padding: 10px 10px 0px 10px;
+        }
+
+        #testMenu {
+            position: relative;
+        }
+
+        #container form table .menu {
+            border: 1px solid #333;
+            display: none;
+            position: absolute;
+            right: 0;
+            top: -35px;
+        }
+
+        #container form table tbody td button {
+            float: right;
+            visibility: hidden;
+        }
+
+        #container form table tbody td:hover button {
+            background-color: white;
+            border-color: white;
+            color: #292c33;
+            visibility: visible;
+        }
+
+        #container #btn_prev, #btn_next {
+            margin: 0px 50px 25px 50px;
+        }
+
+        #container #btn_next {
+            float: right;
+        }
+
+
+    </style>
+
+    <title>write record</title>
 
 </head>
 <body>
@@ -107,10 +128,10 @@
         </div>
     </header>
     <!-- header -->
-    
+
     <div id="container">
-    
-    <div class="summary-wrapper">
+
+        <div class="summary-wrapper">
             <div class="summary"></div>
         </div>
         <div class="menu-wrapper">
@@ -122,10 +143,12 @@
             </ul>
         </div>
         <!-- mypage공용 -->
-        
+
         <div class="title">2020년 08월 스케쥴</div>
-        <button id="btn_prev" type="button"> < 이전 달 보기</button></td>
-        <button id="btn_next" type="button"> 다음 달 보기 > </button></td>
+        <button id="btn_prev" type="button"> < 이전 달 보기</button>
+        </td>
+        <button id="btn_next" type="button"> 다음 달 보기 ></button>
+        </td>
         <form action="" method="">
             <table>
                 <thead>
@@ -142,33 +165,45 @@
                 <tbody>
                     <tr>
                         <td>
-                            <button type="button">+</button><br>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <button type="button">+</button><br>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <button type="button">+</button><br>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <button type="button">+</button><br>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <button type="button">+</button><br>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <button type="button">+</button><br>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>1</span><button type="button">+</button><br>
+                            <span>1</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span>2</span><button type="button">+</button><br>
+                            <span>2</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>3</span><button type="button">+</button><br>
+                            <span>3</span>
+                            <button type="button">+</button>
+                            <br>
                             <a href="#none">am 09:00 김영희 님</a><br>
                             <a href="#none">am 11:00 김철수 님</a><br>
                             <a href="#none">pm 02:00 이영희 님</a><br>
@@ -176,135 +211,205 @@
                             <a href="#none">pm 07:00 황정민 님</a><br>
                         </td>
                         <td>
-                            <span>4</span><button type="button">+</button><br>
+                            <span>4</span>
+                            <button type="button">+</button>
+                            <br>
                             <a href="#none">am 09:00 김영희 님</a><br>
                             <a href="#none">am 11:00 김철수 님</a><br>
                             <a href="#none">pm 07:00 황정민 님</a><br>
                         </td>
                         <td>
-                            <span>5</span><button type="button">+</button><br>
+                            <span>5</span>
+                            <button type="button">+</button>
+                            <br>
                             <a href="#none">am 09:00 김영희 님</a><br>
                         </td>
                         <td>
-                            <span>6</span><button type="button">+</button><br>
+                            <span>6</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>7</span><button type="button">+</button><br>
+                            <span>7</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>8</span><button type="button">+</button><br>
+                            <span>8</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span>9</span><button type="button">+</button><br>
+                            <span>9</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>10</span><button type="button">+</button><br>
+                            <span>10</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>11</span><button type="button">+</button><br>
+                            <span>11</span>
+                            <button type="button">+</button>
+                            <br>
                             <a href="#none">am 09:00 김영희 님</a><br>
                         </td>
                         <td>
-                            <span>12</span><button type="button">+</button><br>
+                            <span>12</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>13</span><button type="button">+</button><br>
+                            <span>13</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>14</span><button type="button">+</button><br>
+                            <span>14</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>15</span><button type="button">+</button><br>
+                            <span>15</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
-                    </tr> 
+                    </tr>
                     <tr>
                         <td>
-                            <span>16</span><button type="button">+</button><br>
+                            <span>16</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>17</span><button type="button">+</button><br>
-                            <a href="#none">am 09:00 김영희 님</a><br>
+                            <span>17</span>
+                            <button type="button">+</button>
+                            <br>
+                            <a href="#none" id="testMenu">
+                                am 09:00 김영희 님
+                                <div class="menu">
+                                    <p>a메뉴</p>
+                                    <p>b메뉴</p>
+                                </div>
+                            </a>
+                            <br>
                             <a href="#none">am 11:00 김철수 님</a><br>
                             <a href="#none">pm 02:00 이영희 님</a><br>
                             <a href="#none">pm 04:00 박철민 님</a><br>
                         </td>
                         <td>
-                            <span>18</span><button type="button">+</button><br>
+                            <span>18</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>19</span><button type="button">+</button><br>
+                            <span>19</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>20</span><button type="button">+</button><br>
+                            <span>20</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>21</span><button type="button">+</button><br>
+                            <span>21</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>22</span><button type="button">+</button><br>
+                            <span>22</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span>23</span><button type="button">+</button><br>
+                            <span>23</span>
+                            <button type="button">+</button>
+                            <br>
                             <a href="#none">am 09:00 김영희 님</a><br>
                             <a href="#none">am 11:00 김철수 님</a><br>
                             <a href="#none">pm 02:00 이영희 님</a><br>
                         </td>
                         <td>
-                            <span>24</span><button type="button">+</button><br>
+                            <span>24</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>25</span><button type="button">+</button><br>
+                            <span>25</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>26</span><button type="button">+</button><br>
+                            <span>26</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>27</span><button type="button">+</button><br>
+                            <span>27</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>28</span><button type="button">+</button><br>
+                            <span>28</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <span>29</span><button type="button">+</button><br>
+                            <span>29</span>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <span>30</span><button type="button">+</button><br>
+                            <span>30</span>
+                            <button type="button">+</button>
+                            <br>
                             <a href="#none">am 09:00 김영희 님</a><br>
                             <a href="#none">am 11:00 김철수 님</a><br>
                         </td>
                         <td>
-                            <span>31</span><button type="button">+</button></td>
-                        <td>
-                            <button type="button">+</button><br>
+                            <span>31</span>
+                            <button type="button">+</button>
                         </td>
                         <td>
-                            <button type="button">+</button><br>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <button type="button">+</button><br>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <button type="button">+</button><br>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                         <td>
-                            <button type="button">+</button><br>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <button type="button">+</button>
+                            <br>
                         </td>
                     </tr>
                 </tbody>
             </table>
 
         </form>
-        <button id="btn_prev" type="button"> < 이전 달 보기</button></td>
-        <button id="btn_next" type="button"> 다음 달 보기 > </button></td>
+        <button id="btn_prev" type="button"> < 이전 달 보기</button>
+        </td>
+        <button id="btn_next" type="button"> 다음 달 보기 ></button>
+        </td>
     </div>
 
-        <footer id="footer">
+    <footer id="footer">
         <div class="wrapper">
             <ul class="agree clearfix">
                 <li><a href="#none">개인정보처리방침</a></li>
@@ -331,5 +436,13 @@
         </div>
     </footer>
     <!-- footer가 필요한 페이지에서 사용 -->
+    <script>
+        $(document).ready(function () {
+            $("a#testMenu").click(function(event){
+                event.preventDefault();
+                $(this).find(".menu").toggle();
+            });
+        });//레디함수종료
+    </script>
 </body>
 </html>
