@@ -12,6 +12,7 @@
   z-index: 8000;
   display: none;
   transition: opacity 0s;
+  vertical-align: middle;
 }
 .modal-layer::after {
   content: "";
