@@ -12,6 +12,7 @@
   z-index: 8000;
   display: none;
   transition: opacity 0s;
+  vertical-align: middle;
 }
 .modal-layer::after {
   content: "";
@@ -165,24 +166,32 @@
 }
 input[type="text"],
 input[type="password"],
-input[type="number"] {
+input[type="number"],
+select {
   display: block;
-  width: 300px;
+  width: 240px;
   height: 30px;
+  margin: 0 0 15px;
   box-sizing: border-box;
   border: 1px solid #292c33;
   border-radius: 4px;
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
+  text-indent: 10px;
 }
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="number"]:focus,
+select:focus,
 input[type="text"]:active,
 input[type="password"]:active,
-input[type="number"]:active {
+input[type="number"]:active,
+select:active {
   outline: none;
+}
+select {
+  width: 150px;
 }
 button.btn {
   display: block;
@@ -207,6 +216,23 @@ button.btn.sub {
   color: #008526;
   border: 1px solid #008526;
 }
+h3.title {
+  font-size: 20px;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+.radio-wrapper input[type='radio'] {
+  cursor: pointer;
+}
+.radio-wrapper label {
+  padding: 0 10px 0 5px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.radio-wrapper input[type='radio']:checked + label {
+  font-weight: 700;
+}
 #header {
   position: fixed;
   padding: 15px 0;
@@ -219,10 +245,13 @@ button.btn.sub {
 }
 #header h1.logo {
   float: left;
-  margin-right: 150px;
+  font-size: 0;
+  margin: 0 150px 0 0;
 }
 #header h1.logo a {
   display: block;
+  margin: 0;
+  padding: 0;
 }
 #header h1.logo a img {
   width: 50px;
@@ -231,6 +260,7 @@ button.btn.sub {
 #header a.search-link {
   display: block;
   float: left;
+  width: 50px;
   height: 50px;
   position: relative;
 }
@@ -253,7 +283,7 @@ button.btn.sub {
   margin-right: 20px;
 }
 #container {
-  padding-top: 80px;
+  padding-top: 81px;
   position: relative;
   z-index: 1;
   -webkit-transform: translate3d(0, 0, 0);

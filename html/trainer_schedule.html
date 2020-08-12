@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- icon 사용을 위한 css -->
+    <link rel="stylesheet" href="../assets/css/fontawesome/all.css">
+
+    <!-- 반드시 넣어야 하는 2가지 css -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+
+    <!-- 반드시 넣어야 하는 2가지 js -->
+    <script src="../assets/js/jquery/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/modal.js"></script>
+
+    <!-- slide -->
+    <link href="../assets/js/swiper-4.2.6/dist/css/swiper.min.css" rel="stylesheet">
+    <script src="../assets/js/swiper-4.2.6/dist/js/swiper.min.js"></script>
+
+    <!-- 해당 페이지 css -->
+    <link rel="stylesheet" href="../assets/css/mypage.css">
+
+
+    <!-- calendar css/js -->
+    <link href='../assets/js/calendar/main.css' rel='stylesheet'>
+    <script src='../assets/js/calendar/main.js'></script>
+    <script src='../assets/js/calendar/theme-chooser.js'></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar;
+
+            initThemeChooser({
+
+                init: function(themeSystem) {
+                    calendar = new FullCalendar.Calendar(calendarEl, {
+                        themeSystem: themeSystem,
+                        headerToolbar: {
+                            left: 'prev,next today',
+                            center: 'title',
+                            right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+                        },
+                        initialDate: '2020-08-12',
+                        weekNumbers: false,
+                        navLinks: true, // can click day/week names to navigate views
+                        editable: false,
+                        selectable: true,
+                        nowIndicator: true,
+                        dayMaxEvents: false, // allow "more" link when too many events
+                        // showNonCurrentDates: false,
+                        events: [
+                            {
+                                title: 'All Day Event',
+                                start: '2020-06-01'
+                            },
+                            {
+                                title: 'Long Event',
+                                start: '2020-06-07',
+                                end: '2020-06-10'
+                            },
+                            {
+                                title: 'Repeating Event',
+                                start: '2020-06-09T16:00:00'
+                            },
+                            {
+                                title: 'Repeating Event',
+                                start: '2020-06-16T16:00:00'
+                            },
+                            {
+                                title: 'Conference',
+                                start: '2020-06-11',
+                                end: '2020-06-13'
+                            },
+                            {
+                                title: 'Meeting',
+                                start: '2020-06-12T10:30:00',
+                                end: '2020-06-12T12:30:00'
+                            },
+                            {
+                                title: 'Lunch',
+                                start: '2020-06-12T12:00:00'
+                            },
+                            {
+                                title: 'Meeting',
+                                start: '2020-06-12T14:30:00'
+                            },
+                            {
+                                title: 'Happy Hour',
+                                start: '2020-06-12T17:30:00'
+                            },
+                            {
+                                title: 'Dinner',
+                                start: '2020-06-12T20:00:00'
+                            },
+                            {
+                                title: 'Birthday Party',
+                                start: '2020-06-13T07:00:00'
+                            },
+                            {
+                                title: 'Click for Google',
+                                url: 'http://google.com/',
+                                start: '2020-06-28'
+                            }
+                        ]
+                    });
+                    calendar.render();
+                    $(".fc-daygrid-day").append(
+                        "<p>test</p>"
+                    );
+                },
+
+                change: function(themeSystem) {
+                    calendar.setOption('themeSystem', themeSystem);
+                }
+
+            });
+
+        });
+
+    </script>
+    <style>
+
+        #top {
+            display: none;
+        }
+
+        #top .selector {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        #top select {
+            font: inherit; /* mock what Boostrap does, don't compete  */
+        }
+
+        .left { float: left }
+        .right { float: right }
+        .clear { clear: both }
+
+        #calendar {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 10px;
+        }
+
+        button.btn {
+            margin: 0;
+        }
+
+    </style>
+    <title>write record</title>
+
+</head>
+<body>
+    <header id="header">
+        <div class="wrapper clearfix">
+            <h1 class="logo">
+                <a href="../html/index.html">
+                    <img src="../assets/image/logoB.jpeg" title="logo" alt="logo">
+                </a>
+            </h1>
+            <a href="../html/search.html" class="search-link"><i class="fas fa-search"></i></a>
+            <nav id="nav">
+            </nav>
+            <div class="btn-area clearfix">
+                <button type="submit" class="btn main">로그아웃</button>
+                <button type="button" class="btn sub">회원가입</button>
+            </div>
+        </div>
+    </header>
+    <!-- header -->
+
+    <div id="container">
+
+        <div class="summary-wrapper">
+            <div class="summary"></div>
+        </div>
+        <div class="menu-wrapper">
+            <ul class="menu clearfix">
+                <li><a href="#none">스케쥴</a></li>
+                <li><a href="#none">운동 관리</a></li>
+                <li><a href="#none">회원 관리</a></li>
+                <li><a href="#none">프로필</a></li>
+            </ul>
+        </div>
+        <!-- mypage공용 -->
+
+        <!--<div class="title">2020년 08월 스케쥴</div>-->
+        <!--<button id="btn_prev" type="button"> < 이전 달 보기</button>
+        <button id="btn_next" type="button"> 다음 달 보기 ></button>-->
+        <!--<form action="" method="">
+            <table>
+                <thead>
+                    <tr>
+                        <th>SUN</th>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WEN</th>
+                        <th>THU</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>1</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>2</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>3</span>
+                            <button type="button">+</button>
+                            <br>
+                            <a href="#none">am 09:00 김영희 님</a><br>
+                            <a href="#none">am 11:00 김철수 님</a><br>
+                            <a href="#none">pm 02:00 이영희 님</a><br>
+                            <a href="#none">pm 04:00 박철민 님</a><br>
+                            <a href="#none">pm 07:00 황정민 님</a><br>
+                        </td>
+                        <td>
+                            <span>4</span>
+                            <button type="button">+</button>
+                            <br>
+                            <a href="#none">am 09:00 김영희 님</a><br>
+                            <a href="#none">am 11:00 김철수 님</a><br>
+                            <a href="#none">pm 07:00 황정민 님</a><br>
+                        </td>
+                        <td>
+                            <span>5</span>
+                            <button type="button">+</button>
+                            <br>
+                            <a href="#none">am 09:00 김영희 님</a><br>
+                        </td>
+                        <td>
+                            <span>6</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>7</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>8</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>9</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>10</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>11</span>
+                            <button type="button">+</button>
+                            <br>
+                            <a href="#none">am 09:00 김영희 님</a><br>
+                        </td>
+                        <td>
+                            <span>12</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>13</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>14</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>15</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>16</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>17</span>
+                            <button type="button">+</button>
+                            <br>
+                            <a href="#none" id="testMenu">
+                                am 09:00 김영희 님
+                                <div class="menu">
+                                    <p>a메뉴</p>
+                                    <p>b메뉴</p>
+                                </div>
+                            </a>
+                            <br>
+                            <a href="#none">am 11:00 김철수 님</a><br>
+                            <a href="#none">pm 02:00 이영희 님</a><br>
+                            <a href="#none">pm 04:00 박철민 님</a><br>
+                        </td>
+                        <td>
+                            <span>18</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>19</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>20</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>21</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>22</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>23</span>
+                            <button type="button">+</button>
+                            <br>
+                            <a href="#none">am 09:00 김영희 님</a><br>
+                            <a href="#none">am 11:00 김철수 님</a><br>
+                            <a href="#none">pm 02:00 이영희 님</a><br>
+                        </td>
+                        <td>
+                            <span>24</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>25</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>26</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>27</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>28</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <span>29</span>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>30</span>
+                            <button type="button">+</button>
+                            <br>
+                            <a href="#none">am 09:00 김영희 님</a><br>
+                            <a href="#none">am 11:00 김철수 님</a><br>
+                        </td>
+                        <td>
+                            <span>31</span>
+                            <button type="button">+</button>
+                        </td>
+                        <td>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                        <td>
+                            <button type="button">+</button>
+                            <br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </form>-->
+
+    </div>
+    <div id='top'>
+
+        <div class='left'>
+
+            <div id='theme-system-selector' class='selector'>
+                Theme System:
+
+                <select>
+                    <option value='bootstrap' selected>Bootstrap 4</option>
+                    <option value='standard'>unthemed</option>
+                </select>
+            </div>
+
+            <div data-theme-system="bootstrap" class='selector' style='display:none'>
+                Theme Name:
+
+                <select>
+                    <option value='' selected>Default</option>
+                    <option value='cerulean'>Cerulean</option>
+                    <option value='cosmo'>Cosmo</option>
+                    <option value='cyborg'>Cyborg</option>
+                    <option value='darkly'>Darkly</option>
+                    <option value='flatly'>Flatly</option>
+                    <option value='journal'>Journal</option>
+                    <option value='litera'>Litera</option>
+                    <option value='lumen'>Lumen</option>
+                    <option value='lux'>Lux</option>
+                    <option value='materia'>Materia</option>
+                    <option value='minty'>Minty</option>
+                    <option value='pulse'>Pulse</option>
+                    <option value='sandstone'>Sandstone</option>
+                    <option value='simplex'>Simplex</option>
+                    <option value='sketchy'>Sketchy</option>
+                    <option value='slate'>Slate</option>
+                    <option value='solar'>Solar</option>
+                    <option value='spacelab'>Spacelab</option>
+                    <option value='superhero'>Superhero</option>
+                    <option value='united'>United</option>
+                    <option value='yeti'>Yeti</option>
+                </select>
+            </div>
+
+            <span id='loading' style='display:none'>loading theme...</span>
+
+        </div>
+
+        <div class='right'>
+      <span class='credits' data-credit-id='bootstrap-standard' style='display:none'>
+        <a href='https://getbootstrap.com/docs/3.3/' target='_blank'>Theme by Bootstrap</a>
+      </span>
+            <span class='credits' data-credit-id='bootstrap-custom' style='display:none'>
+        <a href='https://bootswatch.com/' target='_blank'>Theme by Bootswatch</a>
+      </span>
+        </div>
+
+        <div class='clear'></div>
+    </div>
+
+    <div id='calendar'></div>
+    <footer id="footer">
+        <div class="wrapper">
+            <ul class="agree clearfix">
+                <li><a href="#none">개인정보처리방침</a></li>
+                <li><a href="#none">이용약관</a></li>
+                <li><a href="#none">이메일무단수집거부</a></li>
+                <li><a href="#none">뉴스레터신청</a></li>
+                <li><a href="#none">사이트맵</a></li>
+            </ul>
+            <address>
+                <p>
+                    <span>피트니스메이트(주)</span>
+                    <span>사업자 등록번호 231-81-24552</span>
+                    <span>대표이사 황예지, 김주혜</span>
+                    <span>주소 서울특별시 동대문구 천호대로 26 (신설동) 효정빌딩</span>
+                </p>
+                <p>
+                    <span class="on">제품관련 고객상담 080-000-0000</span>
+                    <span class="on">웹사이트문의 02-2222-2222</span>
+                    <span>상담시간 평일 09:00~17:30(토, 일요일, 공휴일 휴무)</span>
+                    <span>개인정보 관리책임자 이웅희</span>
+                </p>
+            </address>
+            <p class="right"><span>COPYRIGHT 하이미디어 풀스택과정 C팀.</span> ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+    <!-- footer가 필요한 페이지에서 사용 -->
+</body>
+</html>

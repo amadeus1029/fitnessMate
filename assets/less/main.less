@@ -21,3 +21,35 @@
     }
   }
 }
+
+#searchKeywordForm {
+  /* TODO - 최소높이 나중에 삭제 */
+  margin-top: 50px;
+  position: relative;
+  min-height: 400px;
+  .search-condition {
+    padding-top: 10px;
+    li {
+      float: left;
+      margin: 0 30px 0 0;
+      &.local {
+        select {
+          width: 120px;
+          float: left;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  button[type='submit'] {
+    position: absolute;
+    right: 0;
+    top: 30px;
+  }
+}
+
+
+#searchIcon {
+  font-size: 100px;
+  color: red;
+}

@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
-.reviewPage{width: 800px;
-    margin: 0 auto;}
-    
+/*리뷰페이지 전체 크기설정*/
+.reviewPage{width: 1000px;
+    margin: 0 auto 100px auto;}
+
 .trainerProfile{display: inline-block;
 background-color: transparent;
 border-radius: 4px;
@@ -17,18 +18,44 @@ line-height: 40px;
 text-align: center;
 cursor: pointer;}
 
-.review-line{ border-top:1px solid #cc2121;
-    padding:20px 0px;}
+.review-line{ border-bottom:1px solid #cc2121;
+    padding:20px 0px 30px 0;}
+
 
 .userProfile{display: inline-block; height: 50px; width:800px;}
 .userProfile-info{
-    padding:0px 300px 0px 0px;
+    padding:0px 300px 0px 0px;}
+
+.userProfile{display: inline-block; 
+        height: 50px; width:1000px;
+        padding:0px 0px 15px 0px;}
+
+/*유저정보표시구간*/
+.userProfile-info{
+    padding:5px 0px 0px 0px;
+    margin: 0px 600px 0px 0px;
     display: inline-block; 
     width: 100px;
     }
 .userProfile-exs{ height: 50px;  width:100px; font-size: 13px;
                   text-align: center;}
-.userProfile-name{font-style: ;}   
+.userProfile-name{font-style: bold;}   
 .userProfile-date{font-size: 13px; color:#8d8d8d;}
 
-.userProfile-star{display: inline-block; width: 100px;}
+    
+
+
+.userProfile-img{ 
+    float: left;
+    height:50px; width:50px; border-radius: 70%; 
+    margin:0 10px 0px 0px;}
+.userProfile-name{font-weight: bold;}   
+.userProfile-date {font-size: 13px; color:#898989;}
+
+.userProfile-star{display: inline-block; 
+                  
+                   height: 30px;  width: 150px;}
+
+/*리뷰내용표시구간*/
+.review-content{padding:10px 10px; line-height: 20px;}
+.review-imgSize{height: 100px;  width: 100px;}

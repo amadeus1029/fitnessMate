@@ -20,20 +20,26 @@
 //input with icon
 input[type="text"],
 input[type="password"],
-input[type="number"] {
+input[type="number"],
+select {
   display: block;
-  width: 300px;
+  width: 240px;
   height: 30px;
+  margin: 0 0 15px;
   box-sizing: border-box;
   border: 1px solid @color-gray;
   border-radius: 4px;
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
+  text-indent: 10px;
   &:focus,
   &:active {
     outline: none;
   }
+}
+select {
+  width: 150px;
 }
 
 
@@ -62,7 +68,26 @@ button.btn {
   }
 }
 
+h3.title {
+  font-size: 20px;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
 
+.radio-wrapper {
+  input[type='radio'] {
+    cursor: pointer;
+  }
+  label {
+    padding: 0 10px 0 5px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+  }
+  input[type='radio']:checked + label {
+    font-weight: 700;
+  }
+}
 
 //header
 #header {
@@ -77,9 +102,12 @@ button.btn {
   background-color: #fff;
   h1.logo {
     float: left;
-    margin-right: 150px;
+    font-size: 0;
+    margin: 0 150px 0 0;
     a {
       display: block;
+      margin: 0;
+      padding: 0;
       img {
         width: 50px;
         height: 50px;
@@ -89,6 +117,7 @@ button.btn {
   a.search-link {
     display: block;
     float: left;
+    width: 50px;
     height: 50px;
     position: relative;
     i {
@@ -115,7 +144,7 @@ button.btn {
 
 //container
 #container {
-  padding-top: 80px;
+  padding-top: 81px;
   position: relative;
   //사파리 z-index 버그
   z-index: 1;
