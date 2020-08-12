@@ -6,7 +6,7 @@
 .trainerProfile{display: inline-block;
 background-color: transparent;
 border-radius: 4px;
-border: 1px solid #292c33;
+border: 1px solid #cc2121;
 min-width: 100px;
 height: 40px;
 padding: 0 15px;
@@ -21,9 +21,14 @@ cursor: pointer;}
     padding:20px 0px;}
 
 .userProfile{display: inline-block; height: 50px; width:800px;}
-.userProfile-name{
-    padding:0px 500px 0px 0px;
+.userProfile-info{
+    padding:0px 300px 0px 0px;
     display: inline-block; 
-    width: 100px;}
+    width: 100px;
+    }
+.userProfile-exs{ height: 50px;  width:100px; font-size: 13px;
+                  text-align: center;}
+.userProfile-name{font-style: ;}   
+.userProfile-date{font-size: 13px; color:#8d8d8d;}
 
 .userProfile-star{display: inline-block; width: 100px;}
