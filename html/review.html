@@ -95,15 +95,7 @@
                    
                         <img class="review-imgSize" onclick="showModal('#testModal')" src='../assets/image/unnamed.jpg');>
 
-                        <div class="modal-layer" id="testModal">
-                            <div class="modal-wrapper">
-                                <p>테스트 모달입니다</p>
-                            </div>
-                            <div class="modal-btn-area">
-                                <button type="button" class="modal-cancel">취소</button>
-                                <button type="button" class="modal-confirm">확인</button>
-                            </div>
-                        </div>
+                        
 
                         <img class="review-imgSize" src='../assets/image/unnamed.jpg');>
                         <img class="review-imgSize" src='../assets/image/unnamed.jpg');>
@@ -242,12 +234,27 @@
             </address>
             <p class="right"><span>COPYRIGHT 하이미디어 풀스택과정 C팀.</span> ALL RIGHTS RESERVED.</p>
         </div>
+        
     </footer>
     <!-- footer가 필요한 페이지에서 사용 -->
 
 
 
-
+    <div class="modal-layer" id="testModal">
+        <div class="modal-wrapper">
+            <div class="modal-content">
+                <p>테스트 모달입니다</p>
+            </div>
+            <div class="modal-btn-area"> <!-- 버튼이 하나인 모달인 경우 modal-btn-area 옆에 full-modal-btn 달아주세요 -->
+                <!--   버튼이 필요 없으면 btn-area는 만들지 않아도 됩니다 -->
+                <!-- 모달 html 위치는 항상 바디 닫히기 직전으로 부탁합니다 -->
+                <!-- 모달 열기 : showModal('#sampleModal') -->
+                <!-- 모달 닫기 : forceHideModal('#sampleModal') -->
+                <button type="button" class="modal-cancel" onclick="forceHideModal('#testModal')">취소</button>
+                <button type="button" class="modal-confirm">확인</button>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

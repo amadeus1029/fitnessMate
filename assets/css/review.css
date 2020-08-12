@@ -29,7 +29,7 @@ cursor: pointer;}
 /*유저정보표시구간*/
 .userProfile-info{
     padding:5px 0px 0px 0px;
-    margin: 0px 500px 0px 0px;
+    margin: 0px 600px 0px 0px;
     display: inline-block; 
     width: 150px; height: 45px;}
 
@@ -41,7 +41,7 @@ cursor: pointer;}
 .userProfile-date {font-size: 13px; color:#898989;}
 
 .userProfile-star{display: inline-block; 
-                    padding:20px 0px 0px 0px;
+                  
                    height: 30px;  width: 150px;}
 
 /*리뷰내용표시구간*/
