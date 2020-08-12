@@ -12,6 +12,7 @@
   z-index: 8000;
   display: none;
   transition: opacity 0s;
+  vertical-align: middle;
 }
 .modal-layer::after {
   content: "";
@@ -184,6 +185,7 @@
 }
 .menu-wrapper {
   background-color: #dadde6;
+  margin-bottom: 30px;
 }
 .menu-wrapper ul.menu {
   height: 60px;

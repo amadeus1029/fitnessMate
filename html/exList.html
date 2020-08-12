@@ -23,7 +23,7 @@
     <script src="../assets/js/swiper-4.2.6/dist/js/swiper.min.js"></script>
 
     <!-- 해장 페이지 css -->
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/mypage.css">
 </head>
 <body>
     <header id="header">
@@ -45,19 +45,43 @@
     <!-- header가 필요한 페이지에서 사용 -->
 
     <div id="container">
-        <section id="mainBanner">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('../assets/image/main-test-01.jpg')">
-                </div>
-                <div class="swiper-slide" style="background-image: url('../assets/image/main-test-02.jpg')">
-                </div>
-                <div class="swiper-slide" style="background-image: url('../assets/image/main-test-03.jpg')">
-                </div>
-            </div>
-        </section>
+        <div class="summary-wrapper">
+            <div class="summary"></div>
+        </div>
+        <div class="menu-wrapper">
+            <ul class="menu clearfix">
+                <li><a href="#none">스케쥴</a></li>
+                <li><a href="#none">운동 관리</a></li>
+                <li><a href="#none">회원 관리</a></li>
+                <li><a href="#none">프로필</a></li>
+            </ul>
+        </div>
         <div class="wrapper">
-            <!-- 아이콘 사용법-->
-            <i class="fas fa-search" id="searchIcon" onclick="showModal('#testModal')"></i>
+            <form id="addExercise">
+                <div>
+                    <h3 class="title">부위</h3>
+                    <select name="part">
+                        <option selected>전신</option>
+                        <option>상체</option>
+                        <option>승모</option>
+                        <option>어깨</option>
+                        <option>가슴</option>
+                        <option>삼두</option>
+                        <option>이두</option>
+                        <option>전완</option>
+                        <option>등</option>
+                        <option>복부</option>
+                        <option>코어</option>
+                        <option>엉덩이</option>
+                        <option>하체</option>
+                    </select>
+                </div>
+                <div>
+                    <h3 class="title">운동명</h3>
+                    <input type="text" name="name" placeholder="운동명을 입력해주세요">
+                </div>
+                <button type="submit" class="btn main">추가</button>
+            </form>
         </div>
     </div>
 
@@ -88,31 +112,5 @@
         </div>
     </footer>
     <!-- footer가 필요한 페이지에서 사용 -->
-
-    <div class="modal-layer" id="testModal">
-        <div class="modal-wrapper">
-            <div class="modal-content">
-                <p>테스트 모달입니다</p>
-            </div>
-            <div class="modal-btn-area"> <!-- 버튼이 하나인 모달인 경우 modal-btn-area 옆에 full-modal-btn 달아주세요 -->
-                <!--   버튼이 필요 없으면 btn-area는 만들지 않아도 됩니다 -->
-                <!-- 모달 html 위치는 항상 바디 닫히기 직전으로 부탁합니다 -->
-                <!-- 모달 열기 : showModal('#sampleModal') -->
-                <!-- 모달 닫기 : forceHideModal('#sampleModal') -->
-                <button type="button" class="modal-cancel" onclick="forceHideModal('#testModal')">취소</button>
-                <button type="button" class="modal-confirm">확인</button>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript">
-        var swiper = new Swiper('#mainBanner', {
-            loop: true,
-            navigation: false,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false
-            }
-        });
-    </script>
 </body>
 </html>
