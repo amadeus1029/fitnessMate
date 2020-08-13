@@ -30,15 +30,17 @@
     <link href='../assets/js/calendar/main.css' rel='stylesheet'>
     <script src='../assets/js/calendar/main.js'></script>
     <script src='../assets/js/calendar/theme-chooser.js'></script>
+
+
     <script>
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.getElementById('calendar');
             var calendar;
 
             initThemeChooser({
 
-                init: function(themeSystem) {
+                init: function (themeSystem) {
                     calendar = new FullCalendar.Calendar(calendarEl, {
                         themeSystem: themeSystem,
                         headerToolbar: {
@@ -54,68 +56,89 @@
                         nowIndicator: true,
                         dayMaxEvents: false, // allow "more" link when too many events
                         // showNonCurrentDates: false,
+                        dateClick: function (info) {
+                            //TODO - 날짜 클릭시 발생 이벤트
+                            alert(info.dateStr + "를 클릭하셨습니다.");
+
+                        },
+                        eventClick: function (info) {
+                            //TODO - 일정 클릭시 발생 이벤트
+                            event.stopPropagation();
+                            $(".btn_pop").remove();
+                            $(info.el).parent().append(
+                                "<div class='btn_pop'>" +
+                                "<button type='button' class='button'>스케쥴변경</button>" +
+                                "<button type='button' class='button'>운동시작</button>" +
+                                "<div>"
+                            );
+                        },
+                        height: '1200px',
+                        overflow: 'visible',
                         events: [
                             {
-                                title: 'All Day Event',
-                                start: '2020-06-01'
+                                title: '김영희 님',
+                                start: '2020-08-01T09:00'
                             },
                             {
-                                title: 'Long Event',
-                                start: '2020-06-07',
-                                end: '2020-06-10'
+                                title: '김철수 님',
+                                start: '2020-08-01T11:00'
                             },
                             {
-                                title: 'Repeating Event',
-                                start: '2020-06-09T16:00:00'
+                                title: '이영희 님',
+                                start: '2020-08-01T14:00'
                             },
                             {
-                                title: 'Repeating Event',
-                                start: '2020-06-16T16:00:00'
+                                title: '박철민 님',
+                                start: '2020-08-01T16:00'
                             },
                             {
-                                title: 'Conference',
-                                start: '2020-06-11',
-                                end: '2020-06-13'
+                                title: '황정민 님',
+                                start: '2020-08-01T191:00'
                             },
                             {
-                                title: 'Meeting',
-                                start: '2020-06-12T10:30:00',
-                                end: '2020-06-12T12:30:00'
+                                title: '김영희 님',
+                                start: '2020-08-02T09:00'
                             },
                             {
-                                title: 'Lunch',
-                                start: '2020-06-12T12:00:00'
+                                title: '김철수 님',
+                                start: '2020-08-02T11:00'
                             },
                             {
-                                title: 'Meeting',
-                                start: '2020-06-12T14:30:00'
+                                title: '이영희 님',
+                                start: '2020-08-02T14:00'
                             },
                             {
-                                title: 'Happy Hour',
-                                start: '2020-06-12T17:30:00'
+                                title: '김영희 님',
+                                start: '2020-08-05T09:00'
                             },
                             {
-                                title: 'Dinner',
-                                start: '2020-06-12T20:00:00'
+                                title: '김영희 님',
+                                start: '2020-08-11T09:00'
                             },
                             {
-                                title: 'Birthday Party',
-                                start: '2020-06-13T07:00:00'
+                                title: '김영희 님',
+                                start: '2020-08-17T09:00'
                             },
                             {
-                                title: 'Click for Google',
-                                url: 'http://google.com/',
-                                start: '2020-06-28'
-                            }
+                                title: '김철수 님',
+                                start: '2020-08-17T11:00'
+                            },
+                            {
+                                title: '이영희 님',
+                                start: '2020-08-17T14:00'
+                            },
+                            {
+                                title: '박철민 님',
+                                start: '2020-08-17T16:00'
+                            },
                         ]
                     });
                     calendar.render();
-                    $(".fc-daygrid-day").append(
-                        "<p>test</p>"
-                    );
+
+
                 },
 
-                change: function(themeSystem) {
+                change: function (themeSystem) {
                     calendar.setOption('themeSystem', themeSystem);
                 }
 
@@ -139,19 +162,158 @@
             font: inherit; /* mock what Boostrap does, don't compete  */
         }
 
-        .left { float: left }
-        .right { float: right }
-        .clear { clear: both }
+        .left {
+            float: left
+        }
+
+        .right {
+            float: right
+        }
+
+        .clear {
+            clear: both
+        }
 
         #calendar {
             max-width: 1100px;
             margin: 40px auto;
             padding: 0 10px;
+            overflow: visible;
         }
 
-        button.btn {
+        button.btn-primary {
             margin: 0;
+            min-width: 0;
+            width: 80px;
         }
+
+        button.fc-prev-button, button.fc-next-button {
+            min-width: 0;
+            width: 50px;
+        }
+
+        button.fc-today-button {
+            min-width: 0;
+            display: inline-block;
+        }
+
+        td.fc-daygrid-day {
+            position: relative;
+        }
+
+        td.fc-daygrid-day:after {
+            content: '+';
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 24px;
+            height: 24px;
+            line-height: 20px;
+            text-align: center;
+            font-size: 24px;
+            color: gray;
+            opacity: 0;
+            cursor: pointer;
+            border: 1px solid gray;
+        }
+
+        td.fc-daygrid-day:hover:after {
+            transition: all ease 0.7s 0s;
+            opacity: 1;
+        }
+
+        /*i[class="far fa-plus-square"] {
+            margin: 5px 5px 0px 0px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 20px;
+            color: gray;
+            padding: 5px 0px px 0px;
+            opacity: 0;
+            z-index: 9999;
+            cursor: pointer;
+        }*/
+        .fc a.fc-daygrid-day-number {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .modal-wrapper {
+            width: 400px;
+            text-align: left;
+        }
+
+        select {
+            width: 80px;
+            height: 35px;
+            display: inline-block !important;
+        }
+
+        select[name="user_name"] {
+            width: 200px;
+            margin-left: 30px;
+        }
+
+        .text {
+            font-size: 20px;
+            margin: 0 0 10px;
+            font-weight: 700;
+        }
+
+        ol {
+            margin: 0px 30px 0px 30px;
+            float: left;
+        }
+
+        select[name="hour"], select[name="minute"] {
+            margin-top: 10px;
+        }
+
+        p.text {
+            margin-left: 30px;
+        }
+
+        .modal-wrapper .modal-btn-area button {
+            margin-top: 30px;
+        }
+
+        .modal-wrapper .modal-content {
+            padding-bottom: 0px;
+        }
+
+        .fc-daygrid-day-events {
+            padding-top: 30px;
+        }
+
+        table tbody td.fc-day {
+            height: 180px;
+        }
+
+        .btn_pop {
+            position: absolute;
+            z-index: 999;
+            top: -40px;
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #292c33;
+            -webkit-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        .btn_pop button.button {
+            border-radius: 0;
+            margin: 0;
+            width: 100px;
+            border: 0;
+        }
+
+        .fc .fc-scroller-harness {
+            overflow: visible;
+        }
+
 
     </style>
     <title>write record</title>
@@ -169,8 +331,8 @@
             <nav id="nav">
             </nav>
             <div class="btn-area clearfix">
-                <button type="submit" class="btn main">로그아웃</button>
-                <button type="button" class="btn sub">회원가입</button>
+                <button type="submit" class="button main">로그아웃</button>
+                <button type="button" class="button sub">회원가입</button>
             </div>
         </div>
     </header>
@@ -191,263 +353,6 @@
         </div>
         <!-- mypage공용 -->
 
-        <!--<div class="title">2020년 08월 스케쥴</div>-->
-        <!--<button id="btn_prev" type="button"> < 이전 달 보기</button>
-        <button id="btn_next" type="button"> 다음 달 보기 ></button>-->
-        <!--<form action="" method="">
-            <table>
-                <thead>
-                    <tr>
-                        <th>SUN</th>
-                        <th>MON</th>
-                        <th>TUE</th>
-                        <th>WEN</th>
-                        <th>THU</th>
-                        <th>FRI</th>
-                        <th>SAT</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>1</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>2</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>3</span>
-                            <button type="button">+</button>
-                            <br>
-                            <a href="#none">am 09:00 김영희 님</a><br>
-                            <a href="#none">am 11:00 김철수 님</a><br>
-                            <a href="#none">pm 02:00 이영희 님</a><br>
-                            <a href="#none">pm 04:00 박철민 님</a><br>
-                            <a href="#none">pm 07:00 황정민 님</a><br>
-                        </td>
-                        <td>
-                            <span>4</span>
-                            <button type="button">+</button>
-                            <br>
-                            <a href="#none">am 09:00 김영희 님</a><br>
-                            <a href="#none">am 11:00 김철수 님</a><br>
-                            <a href="#none">pm 07:00 황정민 님</a><br>
-                        </td>
-                        <td>
-                            <span>5</span>
-                            <button type="button">+</button>
-                            <br>
-                            <a href="#none">am 09:00 김영희 님</a><br>
-                        </td>
-                        <td>
-                            <span>6</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>7</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>8</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>9</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>10</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>11</span>
-                            <button type="button">+</button>
-                            <br>
-                            <a href="#none">am 09:00 김영희 님</a><br>
-                        </td>
-                        <td>
-                            <span>12</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>13</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>14</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>15</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>16</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>17</span>
-                            <button type="button">+</button>
-                            <br>
-                            <a href="#none" id="testMenu">
-                                am 09:00 김영희 님
-                                <div class="menu">
-                                    <p>a메뉴</p>
-                                    <p>b메뉴</p>
-                                </div>
-                            </a>
-                            <br>
-                            <a href="#none">am 11:00 김철수 님</a><br>
-                            <a href="#none">pm 02:00 이영희 님</a><br>
-                            <a href="#none">pm 04:00 박철민 님</a><br>
-                        </td>
-                        <td>
-                            <span>18</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>19</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>20</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>21</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>22</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>23</span>
-                            <button type="button">+</button>
-                            <br>
-                            <a href="#none">am 09:00 김영희 님</a><br>
-                            <a href="#none">am 11:00 김철수 님</a><br>
-                            <a href="#none">pm 02:00 이영희 님</a><br>
-                        </td>
-                        <td>
-                            <span>24</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>25</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>26</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>27</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>28</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <span>29</span>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span>30</span>
-                            <button type="button">+</button>
-                            <br>
-                            <a href="#none">am 09:00 김영희 님</a><br>
-                            <a href="#none">am 11:00 김철수 님</a><br>
-                        </td>
-                        <td>
-                            <span>31</span>
-                            <button type="button">+</button>
-                        </td>
-                        <td>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                        <td>
-                            <button type="button">+</button>
-                            <br>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </form>-->
 
     </div>
     <div id='top'>
@@ -536,5 +441,111 @@
         </div>
     </footer>
     <!-- footer가 필요한 페이지에서 사용 -->
+
+    <!-- 이하 모달입니다 -->
+    <div class="modal-layer" id="addModal">
+        <div class="modal-wrapper">
+            <form action="" method="">
+                <div class="modal-content">
+                    <div class="select01">
+                        <p class="text">시작시간</p>
+                        <ol>
+                            <li>
+                                <input type="radio" id="am" name="time_section" value="am">
+                                <label for="am">AM</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="pm" name="time_section" value="pm">
+                                <label for="pm">PM</label>
+                            </li>
+                        </ol>
+                        <select name="hour">
+                            <option value="">시간</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select name="minute">
+                            <option value="">분</option>
+                            <option value="00">00</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p class="text">종료시간</p>
+                        <ol>
+                            <li>
+                                <input type="radio" id="am" name="time_section" value="am">
+                                <label for="am">AM</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="pm" name="time_section" value="pm">
+                                <label for="pm">PM</label>
+                            </li>
+                        </ol>
+                        <select name="hour">
+                            <option value="">시간</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select name="minute">
+                            <option value="">분</option>
+                            <option value="00">00</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p class="text">회원이름</p>
+                        <select name="user_name">
+                            <option value="">회원이름</option>
+                            <option value="">김영희(rladudgml)</option>
+                            <option value="">김철수(rlacjftn)</option>
+                            <option value="">이영희(dldudgml)</option>
+                            <option value="">황정민(ghkdwjdals)</option>
+                        </select>
+                    </div>
+            </form>
+            <div class="modal-btn-area">
+                <button type="button" class="modal-cancel" onclick="forceHideModal('#addModal')">취소</button>
+                <button type="button" class="modal-confirm" onclick="forceHideModal('#addModal')">확인</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            //화면 아무곳이나 클릭시 스케쥴 팝업 제거
+            $(window).on("click",function () {
+                $(".btn_pop").remove();
+            });
+        });//레디함수종료
+    </script>
 </body>
+
 </html>

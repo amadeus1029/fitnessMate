@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -22,8 +22,16 @@
     <link href="../assets/js/swiper-4.2.6/dist/css/swiper.min.css" rel="stylesheet">
     <script src="../assets/js/swiper-4.2.6/dist/js/swiper.min.js"></script>
 
-    <!-- 해장 페이지 css -->
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <!-- 해당 페이지 css -->
+    <link rel="stylesheet" href="../assets/css/mypage.css">
+
+    <style>
+
+
+    </style>
+
+    <title>write record</title>
+
 </head>
 <body>
     <header id="header">
@@ -37,34 +45,68 @@
             <nav id="nav">
             </nav>
             <div class="btn-area clearfix">
-                <button type="submit" class="button main">로그인</button>
+                <button type="submit" class="button main">로그아웃</button>
                 <button type="button" class="button sub">회원가입</button>
             </div>
         </div>
     </header>
-    <!-- header가 필요한 페이지에서 사용 -->
+    <!-- header -->
 
     <div id="container">
-        <section id="mainBanner">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('../assets/image/main-test-01.jpg')">
-                </div>
-                <div class="swiper-slide" style="background-image: url('../assets/image/main-test-02.jpg')">
-                </div>
-                <div class="swiper-slide" style="background-image: url('../assets/image/main-test-03.jpg')">
-                </div>
-            </div>
-        </section>
-        <div class="wrapper">
-            <!-- 공간확보용 테스트 텍스트, 완성 후 삭제 -->
-            <p style="padding:50px 0; font-size: 20px;line-height: 1.4">
-                Where does it come from?
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 
-                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-            </p>
+        <div class="summary-wrapper">
+            <div class="summary"></div>
         </div>
-    </div>
+        <div class="menu-wrapper">
+            <ul class="menu clearfix">
+                <li><a href="#none">스케쥴</a></li>
+                <li><a href="#none">운동 관리</a></li>
+                <li><a href="#none">회원 관리</a></li>
+                <li><a href="#none">프로필</a></li>
+            </ul>
+        </div>
+        <!-- mypage공용 -->
+        <form action="" method="">
+            <div id="
+            
+            
+            " class="">
+                <ol>
+                    <li>전신</li>
+                    <li>상체</li>
+                    <li>승모근</li>
+                    <li>어깨</li>
+                    <li>가슴</li>
+                    <li>삼두</li>
+                    <li>이두</li>
+                    <li>전완</li>
+                    <li>복부</li>
+                    <li>등</li>
+                    <li>코어</li>
+                    <li>엉덩이</li>
+                    <li>하체</li>
+                    <li>종아리</li>
+                </ol>
+            </div>
+            <div id="" class="">
+                <ol>
+                    <li>플랭크</li>
+                    <li>버피</li>
+                    <li>스내치</li>
+                    <li>스윙</li>
+                    <li>쓰러스터</li>
+                </ol>  
+            </div>
+            <div>
+                플랭크<br>
+                <input type="text" name="weight" placeholder="무게">
+                <input type="text" name="count" placeholder="횟수"><br>
+                <input type="radio" id="kg" name="weight_unit" value="kg" checked="checked">
+                <label for="kg">kg</label>
+                <input type="radio" id="lb" name="weight_unit" value="lb">
+                <label for="lb">lb</label>
+            </div>
+        </form>
 
     <footer id="footer">
         <div class="wrapper">
@@ -93,16 +135,13 @@
         </div>
     </footer>
     <!-- footer가 필요한 페이지에서 사용 -->
-
-    <script type="text/javascript">
-        var swiper = new Swiper('#mainBanner', {
-            loop: true,
-            navigation: false,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false
-            }
-        });
+    <script>
+        $(document).ready(function () {
+            $("a#testMenu").click(function(event){
+                event.preventDefault();
+                $(this).find(".menu").toggle();
+            });
+        });//레디함수종료
     </script>
 </body>
 </html>
