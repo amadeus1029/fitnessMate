@@ -63,6 +63,8 @@
                         },
                         eventClick: function (info) {
                             //TODO - 일정 클릭시 발생 이벤트
+                            event.stopPropagation();
+                            $(".btn_pop").remove();
                             $(info.el).parent().append(
                                 "<div class='btn_pop'>" +
                                 "<button type='button' class='button'>스케쥴변경</button>" +
@@ -536,6 +538,14 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function () {
+            //화면 아무곳이나 클릭시 스케쥴 팝업 제거
+            $(window).on("click",function () {
+                $(".btn_pop").remove();
+            });
+        });//레디함수종료
+    </script>
 </body>
 
 </html>
