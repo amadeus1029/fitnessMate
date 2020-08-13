@@ -56,9 +56,10 @@
                 <li><a href="#none">프로필</a></li>
             </ul>
         </div>
-        <div class="wrapper">
-            <form id="addExercise">
-                <div>
+        <div class="wrapper clearfix">
+            <form id="addExercise" class="clearfix">
+                <h2>운동 추가하기</h2>
+                <div class="input-box">
                     <h3 class="title">부위</h3>
                     <select name="part">
                         <option selected>전신</option>
@@ -76,12 +77,58 @@
                         <option>하체</option>
                     </select>
                 </div>
-                <div>
+                <div class="input-box">
                     <h3 class="title">운동명</h3>
                     <input type="text" name="name" placeholder="운동명을 입력해주세요">
                 </div>
+                <div class="input-box">
+                    <h3 class="title">단위</h3>
+                    <div class="radio-wrapper">
+                        <input type="radio" id="amountKG" name="amount" value="kg" checked>
+                        <label for="amountKG">킬로그렘</label>
+                        <input type="radio" id="amountPound" name="amount" value="pound">
+                        <label for="amountPound">파운드</label>
+                        <input type="radio" id="amountTime" name="amount" value="time">
+                        <label for="amountTime">시간(초)</label>
+                    </div>
+                </div>
                 <button type="submit" class="btn main">추가</button>
             </form>
+            <div id="exerciseList">
+                <h2>운동 목록</h2>
+                <div class="exercise">
+                    <h4 class="title">데드리프트</h4>
+                    <p class="detail">
+                        <span class="part">운동부위 : 코어</span>
+                        <span class="amount">기록단위 : 킬로그램</span>
+                    </p>
+                    <button type="button" class="delete-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="exercise">
+                    <h4 class="title">벤치프레스</h4>
+                    <p class="detail">
+                        <span class="part">운동부위 : 가슴</span>
+                        <span class="amount">기록단위 : 파운드</span>
+                    </p>
+                    <button type="button" class="delete-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="exercise">
+                    <h4 class="title">스쿼트</h4>
+                    <p class="detail">
+                        <span class="part">운동부위 : 하체</span>
+                        <span class="amount">기록단위 : 킬로그램</span>
+                    </p>
+                    <button type="button" class="delete-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="exercise">
+                    <h4 class="title">매달리기</h4>
+                    <p class="detail">
+                        <span class="part">운동부위 : 등</span>
+                        <span class="amount">기록단위 : 시간(초)</span>
+                    </p>
+                    <button type="button" class="delete-btn"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
         </div>
     </div>
 
