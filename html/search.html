@@ -228,14 +228,72 @@
     <!-- footer가 필요한 페이지에서 사용 -->
     <div class="modal-layer" id="profileModal">
         <div class="modal-wrapper">
-            <button type="button" class="close-btn">X</button>
+            <button type="button" class="close-btn" onclick="forceHideModal('#profileModal')">X</button>
             <div class="label-wrapper clearfix">
                 <button type="button" class="label-btn on" data-tab="profile" onclick="showTab($(this))">프로필</button>
                 <button type="button" class="label-btn" data-tab="review" onclick="showTab($(this))">리뷰</button>
                 <button type="button" class="label-btn" data-tab="location" onclick="showTab($(this))">위치</button>
             </div>
             <div class="modal-content">
-                <div class="label-tab profile-wrapper on">프로필</div>
+                <div class="label-tab profile-wrapper on">
+                    <div class="summary-wrapper clearfix">
+                        <img src="../assets/image/face/Park-Myung- Soo.jpg" class="profile-img">
+                        <div class="summary">
+                            <p class="name">박명수</p>
+                            <p class="belong">무한도전 피트니스짐</p>
+                        </div>
+                        <div class="score">
+                            <p class="head">평점</p>
+                            <p class="body">4.7점</p>
+                        </div>
+                        <div class="score">
+                            <p class="head">리뷰수</p>
+                            <p class="body">117개</p>
+                        </div>
+                    </div>
+                    <div class="info-wrapper clearfix">
+                        <div class="info">
+                            <h3 class="title">나이</h3>
+                            <p class="content">42세</p>
+                        </div>
+                        <div class="info">
+                            <h3 class="title">성별</h3>
+                            <p class="content">남성</p>
+                        </div>
+                        <div class="info">
+                            <h3 class="title">지역</h3>
+                            <p class="content">서울특별시 강남구 압구정동</p>
+                        </div>
+                        <div class="info">
+                            <h3 class="title">트레이너 경력</h3>
+                            <p class="content">12년</p>
+                        </div>
+                    </div>
+                    <div class="info-wrapper clearfix">
+                        <div class="category-info">
+                            <h3 class="title">전문분야</h3>
+                            <span class="category">다이어트</span>
+                            <span class="category">재활</span>
+                            <span class="category">프로필 촬영</span>
+                        </div>
+                        <div class="award-info">
+                            <h3 class="title">입상경력</h3>
+                            <span class="award">머슬마니아 3위</span>
+                            <span class="award">전국체전 우수상</span>
+                            <span class="award">체육관 개근상</span>
+                            <span class="award">무사고 12년</span>
+                        </div>
+                    </div>
+                    <div class="pay-wrapper">
+                        <h3 class="title">비용</h3>
+                        <p class="content">10회 이상 신청시 회당 5만원<br>20회 이상 신청시 회당 4만원<br>30회 이상 신청 시 회당 3만원</p>
+                    </div>
+                    <div class="comment-wrapper">
+                        <h3 class="title">트레이너 메세지</h3>
+                        <p class="content">정당은 그 목적·조직과 활동이 민주적이어야 하며, 국민의 정치적 의사형성에 참여하는데 필요한 조직을 가져야 한다. 법관은 탄핵 또는 금고
+                            이상의 형의 선고에 의하지 아니하고는 파면되지 아니하며, 징계처분에 의하지 아니하고는 정직·감봉 기타 불리한 처분을 받지 아니한다.</p>
+                    </div>
+                </div>
                 <div class="label-tab review-wrapper">리뷰</div>
                 <div class="label-tab location-wrapper">위치</div>
             </div>

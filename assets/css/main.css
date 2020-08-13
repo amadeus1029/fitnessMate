@@ -253,7 +253,7 @@ ul.search-list li.search-result .content-area p.score {
 #profileModal .modal-wrapper {
   position: relative;
   width: 800px;
-  padding: 20px;
+  padding: 30px;
   overflow: visible;
   border-radius: 4px;
 }
@@ -266,6 +266,17 @@ ul.search-list li.search-result .content-area p.score {
   top: 0;
   left: 0;
   background-color: #fff;
+}
+#profileModal .modal-wrapper button.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: transparent;
+  border: 0;
+  font-size: 32px;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
 }
 #profileModal .modal-wrapper .label-wrapper {
   position: absolute;
@@ -280,7 +291,7 @@ ul.search-list li.search-result .content-area p.score {
   float: left;
   width: 100px;
   height: 40px;
-  background-color: #008526;
+  background-color: #cc2121;
   color: #fff;
   font-size: 18px;
   font-weight: 500;
@@ -290,7 +301,7 @@ ul.search-list li.search-result .content-area p.score {
   cursor: pointer ;
 }
 #profileModal .modal-wrapper .label-wrapper button.label-btn.on {
-  color: #008526;
+  color: #cc2121;
   background-color: #fff;
 }
 #profileModal .modal-wrapper .modal-content .label-tab {
@@ -298,6 +309,121 @@ ul.search-list li.search-result .content-area p.score {
 }
 #profileModal .modal-wrapper .modal-content .label-tab.on {
   display: block;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .summary-wrapper {
+  border: 1px solid #dadde6;
+  background-color: #f0f2f7;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .summary-wrapper img.profile-img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .summary-wrapper div.summary {
+  float: left;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .summary-wrapper div.summary p.name {
+  color: #292c33;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .summary-wrapper div.summary p.belong {
+  color: #008526;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: left;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .summary-wrapper div.score {
+  float: right;
+  width: 150px;
+  margin-top: 30px;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .summary-wrapper div.score p.head {
+  color: #292c33;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .summary-wrapper div.score p.body {
+  color: #cc2121;
+  font-size: 20px;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper {
+  margin-top: 40px;
+  min-height: 110px;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .info {
+  float: left;
+  text-align: left;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .info:not(:last-of-type) {
+  margin-right: 100px;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .info p.content {
+  color: #292c33;
+  font-size: 16px;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info,
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info {
+  width: 50%;
+  float: left;
+  text-align: left;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info .category,
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info .category,
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info .award,
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info .award {
+  display: inline-block;
+  min-width: 50px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info .category:not(:last-of-type),
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info .category:not(:last-of-type),
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info .award:not(:last-of-type),
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info .award:not(:last-of-type) {
+  margin-right: 10px;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info .category.category,
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info .category.category,
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info .award.category,
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info .award.category {
+  background-color: #cc2121;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info .category.award,
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info .category.award,
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info .award.award,
+#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info .award.award {
+  background-color: #008526;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .pay-wrapper,
+#profileModal .modal-wrapper .modal-content .label-tab .comment-wrapper {
+  text-align: left;
+  margin-top: 40px;
+}
+#profileModal .modal-wrapper .modal-content .label-tab .pay-wrapper p.content,
+#profileModal .modal-wrapper .modal-content .label-tab .comment-wrapper p.content {
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 4px;
+  min-height: 70px;
+  background-color: #f0f2f7;
+  color: #292c33;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
 }
 #searchIcon {
   font-size: 100px;
