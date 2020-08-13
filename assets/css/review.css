@@ -1,12 +1,13 @@
 @charset "UTF-8";
 
-.reviewPage{width: 800px;
-    margin: 0 auto;}
-    
+/*리뷰페이지 전체 크기설정*/
+.reviewPage{width: 1000px;
+    margin: 0 auto 100px auto;}
+
 .trainerProfile{display: inline-block;
 background-color: transparent;
 border-radius: 4px;
-border: 1px solid #292c33;
+border: 1px solid #a0a0a0;
 min-width: 100px;
 height: 40px;
 padding: 0 15px;
@@ -17,13 +18,64 @@ line-height: 40px;
 text-align: center;
 cursor: pointer;}
 
-.review-line{ border-top:1px solid #cc2121;
-    padding:20px 0px;}
+.review-line{ border-bottom:1px solid #a0a0a0;
+    padding:20px 0px 30px 0;}
+
 
 .userProfile{display: inline-block; height: 50px; width:800px;}
-.userProfile-name{
-    padding:0px 500px 0px 0px;
-    display: inline-block; 
-    width: 100px;}
+.userProfile-info{
+    padding:0px 300px 0px 0px;}
 
-.userProfile-star{display: inline-block; width: 100px;}
+.userProfile{display: inline-block; 
+        height: 50px; width:1000px;
+        padding:0px 0px 15px 0px;}
+
+/*유저정보표시구간*/
+.userProfile-info{
+    padding:5px 0px 0px 0px;
+    margin: 0px 600px 0px 0px;
+    display: inline-block; 
+    width: 100px;
+    }
+.userProfile-exs{ height: 50px;  width:100px; font-size: 13px;
+                  text-align: center;}
+.userProfile-name{font-style: bold;}   
+.userProfile-date{font-size: 13px; color:#8d8d8d;}
+
+.userProfile-img{ 
+    float: left;
+    height:50px; width:50px; border-radius: 70%; 
+    margin:0 10px 0px 0px;}
+.userProfile-name{font-weight: bold;}   
+.userProfile-date {font-size: 13px; color:#898989;}
+
+.userProfile-star{display: inline-block; 
+                  
+                   height: 30px;  width: 150px;}
+
+
+
+/*리뷰내용표시구간*/
+.review-content{padding:10px 10px; line-height: 20px;}
+.review-imgSize{height: 100px;  width: 100px;}
+
+/*모달사진*/
+.review-imgSizefull{height: 700px;  width: 700px; margin: 20px;}
+.modal-review{
+    display: inline-block;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 4px;
+  margin: 0;
+  height: 800px;  width: 800px;
+  
+  float: none;
+  vertical-align: middle;
+}
+
+/*지도*/
+.mapName{font-size: 20px;
+        font-style: bold;
+        text-align: center;
+        padding: 10px 0px;}
+.mapName2{ text-align: center;}

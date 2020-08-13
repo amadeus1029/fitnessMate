@@ -8562,8 +8562,8 @@ var FullCalendar = (function (exports) {
                 }
             }
             return (createElement("div", { ref: this.handleEl, className: className.join(' '), style: {
-                    overflowX: props.overflowX,
-                    overflowY: props.overflowY,
+                    overflowX: 'visible',
+                    overflowY: 'visible',
                     left: (isAbsolute && -(props.overcomeLeft || 0)) || '',
                     right: (isAbsolute && -(props.overcomeRight || 0)) || '',
                     bottom: (isAbsolute && -(props.overcomeBottom || 0)) || '',
