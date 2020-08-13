@@ -170,10 +170,8 @@
   background-repeat: no-repeat;
 }
 #searchKeywordForm {
-  /* TODO - 최소높이 나중에 삭제 */
   margin-top: 50px;
   position: relative;
-  min-height: 400px;
 }
 #searchKeywordForm .search-condition {
   padding-top: 10px;
@@ -191,6 +189,115 @@
   position: absolute;
   right: 0;
   top: 30px;
+}
+ul.search-list {
+  padding-top: 150px;
+}
+ul.search-list li.search-result {
+  float: left;
+  width: calc((100% - 90px)/4);
+  box-sizing: border-box;
+  border: 1px solid #8f98b3;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+ul.search-list li.search-result:not( :nth-child(4n)) {
+  margin-right: 30px;
+}
+ul.search-list li.search-result .image-area {
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+ul.search-list li.search-result .content-area {
+  height: 200px;
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+}
+ul.search-list li.search-result .content-area p.name {
+  color: #292c33;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+ul.search-list li.search-result .content-area p.gym {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #008526;
+  font-weight: 500;
+}
+ul.search-list li.search-result .content-area p.comment {
+  line-height: 1.4;
+  height: 5.6em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  margin-top: 20px;
+  color: #292c33;
+  font-size: 14px;
+}
+ul.search-list li.search-result .content-area p.score {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #cc2121;
+}
+#profileModal .modal-wrapper {
+  position: relative;
+  width: 800px;
+  padding: 20px;
+  overflow: visible;
+  border-radius: 4px;
+}
+#profileModal .modal-wrapper:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 90%;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+#profileModal .modal-wrapper .label-wrapper {
+  position: absolute;
+  left: 0;
+  top: -32px;
+  overflow: hidden;
+  z-index: -1;
+  border-radius: 10px;
+}
+#profileModal .modal-wrapper .label-wrapper button.label-btn {
+  display: block;
+  float: left;
+  width: 100px;
+  height: 40px;
+  background-color: #008526;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  border: 0;
+  outline: none;
+  cursor: pointer ;
+}
+#profileModal .modal-wrapper .label-wrapper button.label-btn.on {
+  color: #008526;
+  background-color: #fff;
+}
+#profileModal .modal-wrapper .modal-content .label-tab {
+  display: none;
+}
+#profileModal .modal-wrapper .modal-content .label-tab.on {
+  display: block;
 }
 #searchIcon {
   font-size: 100px;
