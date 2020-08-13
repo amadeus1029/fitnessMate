@@ -27,6 +27,55 @@
 
     <style>
 
+        .box_color {
+            background-color: gray;
+            width: 200px;
+            height: 400px;
+            padding: 10px;
+            line-height: 180%;
+            text-align: center;
+        }
+        .wrapper {
+            position: relative;
+        }
+        #first_select ol li{
+            cursor: pointer;
+        }
+        .wrapper ol li:hover{
+            background-color: #419ffe;
+        }
+        #second_select { 
+            position: absolute;
+            top: 0px;
+            left: 350px;
+        }
+        #second_select ol li{
+            cursor: pointer;
+        }
+        .box_color.each {
+            position: absolute;
+            top: 0px;
+            left: 700px;
+        }
+        input[type="text"]{
+            display: inline-block;
+            width: 80px;
+            margin-top: 10px;
+        }
+        .each {
+            width: 220px;
+            height: auto;
+            text-align:left;
+            padding-left: 16px;
+        }
+        .each p{
+            line-height: 200%;
+            font-weight: 600;
+            font-size: 19px;
+        }
+        div.each i{
+            font-size: 20px;
+        }
 
     </style>
 
@@ -67,46 +116,44 @@
         </div>
         <!-- mypage공용 -->
         <form action="" method="">
-            <div id="
-            
-            
-            " class="">
-                <ol>
-                    <li>전신</li>
-                    <li>상체</li>
-                    <li>승모근</li>
-                    <li>어깨</li>
-                    <li>가슴</li>
-                    <li>삼두</li>
-                    <li>이두</li>
-                    <li>전완</li>
-                    <li>복부</li>
-                    <li>등</li>
-                    <li>코어</li>
-                    <li>엉덩이</li>
-                    <li>하체</li>
-                    <li>종아리</li>
-                </ol>
-            </div>
-            <div id="" class="">
-                <ol>
-                    <li>플랭크</li>
-                    <li>버피</li>
-                    <li>스내치</li>
-                    <li>스윙</li>
-                    <li>쓰러스터</li>
-                </ol>  
-            </div>
-            <div>
-                플랭크<br>
-                <input type="text" name="weight" placeholder="무게">
-                <input type="text" name="count" placeholder="횟수"><br>
-                <input type="radio" id="kg" name="weight_unit" value="kg" checked="checked">
-                <label for="kg">kg</label>
-                <input type="radio" id="lb" name="weight_unit" value="lb">
-                <label for="lb">lb</label>
-            </div>
-        </form>
+            <div class="wrapper">
+                <div id="first_select" class="box_color">
+                    <ol>
+                        <li>전신</li>
+                        <li id="part2">상체</li>
+                        <li id="part3">승모근</li>
+                        <li id="part4">어깨</li>
+                        <li id="part5">가슴</li>
+                        <li id="part6">삼두</li>
+                        <li id="part7">이두</li>
+                        <li id="part8">전완</li>
+                        <li id="part9">복부</li>
+                        <li id="part10">등</li>
+                        <li id="part11">코어</li>
+                        <li id="part12">엉덩이</li>
+                        <li id="part13">하체</li>
+                        <li id="part14">종아리</li>
+                    </ol>
+                </div>
+                <div id="second_select" class="box_color">
+                    <ol>
+
+                    </ol>  
+                </div>
+                <div class="box_color each">
+                    <p>플랭크</p>
+                    <input type="radio" id="kg" name="weight_unit" value="kg" checked="checked">
+                    <label for="kg">kg</label>
+                    <input type="radio" id="lb" name="weight_unit" value="lb">
+                    <label for="lb">lb</label><br>
+                    <input type="text" name="weight" placeholder="무게">
+                    <input type="text" name="count" placeholder="횟수">
+                    <i class="far fa-plus-square"></i>
+                    <i class="far fa-minus-square"></i>
+                </div>
+
+            </form>
+        </div>
 
     <footer id="footer">
         <div class="wrapper">
@@ -144,4 +191,28 @@
         });//레디함수종료
     </script>
 </body>
+<script type="text/javascript">
+    var secondList = ''; // (운동명) 두번째 셀렉트 할 리스트
+
+$("#first_select ol li").on("click", function(){
+    var str= $("#second_select ol").html();
+    console.log(str);
+    //$("#second_select ol").remove();
+    $("#second_select ol").html('');
+
+
+    // 데이터 받아와서 리스트 만들어야함
+    var secondList = '';
+    secondList += '<li>플랭크</li>';
+    secondList += '<li>버피</li>';
+    secondList += '<li>스내치</li>';
+    secondList += '<li>스윙</li>';
+    secondList += '<li>쓰러스터</li>';
+
+    $("#second_select ol").html(secondList);
+
+
+});
+
+</script>
 </html>
