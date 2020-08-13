@@ -68,7 +68,7 @@ cursor: pointer;}
 .more{font-weight: bold;  }
 
 /*모달사진*/
-.review-imgSizefull{height: 700px;  width: 700px;}
+.review-imgSizefull{height: 700px;  width: 700px; padding: 10px;}
 .modal-review{
     display: inline-block;
   overflow: hidden;
