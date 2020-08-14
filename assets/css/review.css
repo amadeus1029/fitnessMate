@@ -19,7 +19,7 @@ text-align: center;
 cursor: pointer;}
 
 .review-line{ border-bottom:1px solid #a0a0a0;
-    padding:20px 0px 30px 0;}
+    padding:20px 0px 20px 0;}
 
 
 .userProfile{display: inline-block; height: 50px; width:800px;}
@@ -50,17 +50,25 @@ cursor: pointer;}
 .userProfile-date {font-size: 13px; color:#898989;}
 
 .userProfile-star{display: inline-block; 
-                  
-                   height: 30px;  width: 150px;}
+                   height: 30px;  width: 120px;
+                  padding: 0 0 0 100px;}
 
 
 
 /*리뷰내용표시구간*/
-.review-content{padding:10px 10px; line-height: 20px;}
 .review-imgSize{height: 100px;  width: 100px;}
 
+.box{margin:10px 0px ;}
+.content{
+    margin:10px 0px;
+    width:1000px;
+    padding:0px;
+    line-height: 20px;
+}
+.more{font-weight: bold;  }
+
 /*모달사진*/
-.review-imgSizefull{height: 700px;  width: 700px; margin: 20px;}
+.review-imgSizefull{height: 700px;  width: 700px; padding: 10px;}
 .modal-review{
     display: inline-block;
   overflow: hidden;
@@ -68,10 +76,32 @@ cursor: pointer;}
   border-radius: 4px;
   margin: 0;
   height: 800px;  width: 800px;
-  
   float: none;
   vertical-align: middle;
 }
+
+
+
+
+/*수정,삭제,답장 버튼*/
+.btn-re{display: inline-block; 
+    height: 40px;
+   
+    margin:0 0 0 800px;
+      width: 200px;}
+.btn-review{display: inline-block;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #a0a0a0;
+    min-width: 80px;
+    height: 40px;
+    padding: 0 15px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;}      
 
 /*지도*/
 .mapName{font-size: 20px;
