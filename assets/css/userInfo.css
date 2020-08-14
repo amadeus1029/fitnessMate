@@ -1,6 +1,7 @@
 
 /*회원관리 페이지 구역*/
-.user{width:1200px; height: auto; margin: 0 auto 100px auto;  }
+.user{width:1200px; height: auto; margin: 0 auto 100px auto;  
+min-height: 450px;}
 
 /*aside*/
 .user-aSide{width: 300px; height: auto; display: inline-block; }
@@ -24,16 +25,15 @@ tr{border-bottom: 1px solid #a0a0a0;}
 td{padding:5px;}
 
 
-
-
 /*회원정보 구역*/
-.user-informationArea{width: 900px; height: auto;  float: right;  }   
+.user-informationArea{width: 900px; height: auto;  margin:0 0 60px 0;float: right;  }   
 #plusButton{display: inline; margin:0 0 0 800px;  border:1px solid #cc2121;  
 }
 
 .user-information{width: 700px; height: auto;  margin:20px 0 20px 60px;}
 .informationBox{
    width: 700px; height: auto; border:1px solid #a0a0a0; 
+   border-radius: 4px;
    }
 
 #info{display: inline; margin:5px;  border:1px solid #a0a0a0; }
@@ -44,3 +44,7 @@ td{padding:5px;}
             margin:70px 10px 10px 10px;}
 
 .mem-info{margin:5px;}
+.mem-name{font-weight: bold;}
+
+/*모달*/
+#member-modal{width: 200px; margin:10px 10px 10px 55px; }
