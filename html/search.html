@@ -37,8 +37,8 @@
             <nav id="nav">
             </nav>
             <div class="btn-area clearfix">
-                <button type="submit" class="button main">로그인</button>
-                <button type="button" class="button sub">회원가입</button>
+                <a href="index.html" class="button sub">로그아웃</a>
+                <a href="trainer_schedule.html" class="button main">마이페이지</a>
             </div>
         </div>
     </header>
@@ -230,9 +230,9 @@
         <div class="modal-wrapper">
             <button type="button" class="close-btn" onclick="forceHideModal('#profileModal')">X</button>
             <div class="label-wrapper clearfix">
-                <button type="button" class="label-btn on" data-tab="profile" onclick="showTab($(this))">프로필</button>
-                <button type="button" class="label-btn" data-tab="review" onclick="showTab($(this))">리뷰</button>
-                <button type="button" class="label-btn" data-tab="location" onclick="showTab($(this))">위치</button>
+                <button type="button" class="label-btn profile-btn on" data-tab="profile" onclick="showTab($(this))">프로필</button>
+                <button type="button" class="label-btn review-btn" data-tab="review" onclick="showTab($(this))">리뷰</button>
+                <button type="button" class="label-btn location-btn" data-tab="location" onclick="showTab($(this))">위치</button>
             </div>
             <div class="modal-content">
                 <div class="label-tab profile-wrapper on">
@@ -294,15 +294,98 @@
                             이상의 형의 선고에 의하지 아니하고는 파면되지 아니하며, 징계처분에 의하지 아니하고는 정직·감봉 기타 불리한 처분을 받지 아니한다.</p>
                     </div>
                 </div>
-                <div class="label-tab review-wrapper">리뷰</div>
+                <div class="label-tab review-wrapper">
+                    <ul class="review-list">
+                        <li class="review-line">
+
+
+                            <div class="user-profile">
+
+                                <img class="user-profile-img" src='../assets/image/unnamed.jpg' );>
+
+                                <div class="user-profile-info">
+                                    <div class="user-profile-name">김**</div>
+                                    <div class="user-profile-date">운동기간- n개월</div>
+                                    <div class="user-profile-date">2020-08-11</div>
+                                </div>
+                                <div class="user-profile-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="box">
+                                <div class="content">여긴 리뷰내용 쓰는 곳입니다.
+                                    리뷰내용은 쏼라쏼라쏼라입니다.<br>
+                                    가나다라마바사아자차카타파하아야어여오요우유 으이~
+                                </div>
+                            </div>
+
+                            <img class="review-imgSize" onclick="showModal('#testModal')"
+                                 src='../assets/image/unnamed.jpg'
+                                 );>
+                            <img class="review-imgSize" onclick="showModal('#testModal')"
+                                 src='../assets/image/main-test-02.jpg' );>
+                            <img class="review-imgSize" onclick="showModal('#testModal')"
+                                 src='../assets/image/review-test2.jpg' );>
+                            <div class="clearfix review-btn-area">
+                                <button type="button" class="button">삭제</button>
+                                <button type="button" class="button">수정</button>
+                            </div>
+                        </li>
+                        <li class="review-line">
+
+                            <div class="user-profile">
+
+                                <img class="user-profile-img" src='../assets/image/review-test2.jpg' );>
+
+                                <div class="user-profile-info">
+                                    <div class="user-profile-name">이**</div>
+                                    <div class="user-profile-date">운동기간- n개월</div>
+                                    <div class="user-profile-date">2020-08-11</div>
+                                </div>
+                                <div class="user-profile-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="content">여긴 리뷰내용 쓰는 곳입니다.
+                                    리뷰내용은 쏼라쏼라쏼라입니다.<br>
+                                    이 트레이너분 맨날 하나만 더라면서 열 번 더시킵니다.<br>
+                                    완전 사기꾼이예요.
+                                </div>
+                            </div>
+                            <div class="clearfix review-btn-area">
+                                <button type="button" class="button">삭제</button>
+                                <button type="button" class="button">수정</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
                 <div class="label-tab location-wrapper">위치</div>
             </div>
         </div>
     </div>
     <script>
         function showProfileModal(obj) {
+            //다른 버튼 on 제거
+            $("#profileModal .label-wrapper .label-btn").removeClass("on");
+            $("#profileModal .label-wrapper .profile-btn").addClass("on");
+            //다른 탭 on 제거
+            $("#profileModal .label-tab").removeClass("on");
+            $("#profileModal .profile-wrapper").addClass("on");
             showModal("#profileModal");
         }
+
         function showTab(target) {
             var targetTab = target.attr("data-tab");
 
@@ -315,7 +398,7 @@
             target.addClass("on");
 
             //tab에 on
-            $("#profileModal").find("."+targetTab+"-wrapper").addClass("on");
+            $("#profileModal").find("." + targetTab + "-wrapper").addClass("on");
 
         }
     </script>

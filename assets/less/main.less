@@ -122,6 +122,7 @@ ul.search-list {
     padding: 30px;
     overflow: visible;
     border-radius: 4px;
+
     &:before {
       content: '';
       display: block;
@@ -132,6 +133,7 @@ ul.search-list {
       left: 0;
       background-color: #fff;
     }
+
     button.close-btn {
       position: absolute;
       right: 10px;
@@ -143,6 +145,7 @@ ul.search-list {
       outline: none;
       cursor: pointer;
     }
+
     .label-wrapper {
       position: absolute;
       left: 0;
@@ -150,6 +153,7 @@ ul.search-list {
       overflow: hidden;
       z-index: -1;
       border-radius: 10px;
+
       button.label-btn {
         display: block;
         float: left;
@@ -162,120 +166,204 @@ ul.search-list {
         text-align: center;
         border: 0;
         outline: none;
-        cursor: pointer ;
+        cursor: pointer;
+
         &.on {
           color: @color-main;
           background-color: #fff;
         }
       }
     }
+
     .modal-content {
       .label-tab {
         display: none;
+
         &.on {
           display: block;
         }
-        .summary-wrapper {
-          border: 1px solid rgb(218, 221, 230);
-          background-color: rgb(240, 242, 247);
-          padding: 20px;
-          box-sizing: border-box;
-          img.profile-img {
-            width: 80px;
-            height: 80px;
-            display: block;
-            float: left;
-            margin-right: 20px;
-            border-radius: 50%;
-          }
-          div.summary {
-            float: left;
-            p.name {
-              color: @color-gray;
-              font-size: 24px;
-              font-weight: 700;
-              line-height: 40px;
-              text-align: left;
-            }
-            p.belong {
-              color: @color-sub;
-              font-size: 18px;
-              font-weight: 500;
-              line-height: 40px;
-              text-align: left;
-            }
-          }
-          div.score {
-            float: right;
-            width: 150px;
-            margin-top: 30px;
-            p.head {
-              color: @color-gray;
-              font-size: 16px;
-              margin-bottom: 5px;
-            }
-            p.body {
-              color: @color-main;
-              font-size: 20px;
-            }
-          }
-        }
-        .info-wrapper {
-          margin-top: 40px;
-          min-height: 110px;
-          .info {
-            float: left;
-            text-align: left;
-            &:not(:last-of-type) {
-              margin-right: 100px;
-            }
-            p.content {
-              color: @color-gray;
-              font-size: 16px;
-            }
-          }
-          .category-info,
-          .award-info {
-            width: 50%;
-            float: left;
-            text-align: left;
-            .category,
-            .award {
-              display: inline-block;
-              min-width: 50px;
-              padding: 0 10px;
-              margin-bottom: 10px;
-              border-radius: 4px;
-              color: #fff;
-              font-size: 16px;
-              line-height: 30px;
-              text-align: center;
-              &:not(:last-of-type) {
-                margin-right: 10px;
-              }
-              &.category {
-                background-color: @color-main;
-              }
-              &.award {
-                background-color: @color-sub;
-              }
-            }
-          }
-        }
-        .pay-wrapper,
-        .comment-wrapper {
-          text-align: left;
-          margin-top: 40px;
-          p.content {
-            box-sizing: border-box;
-            padding: 15px;
-            border-radius: 4px;
-            min-height: 70px;
+
+        &.profile-wrapper {
+          .summary-wrapper {
+            border: 1px solid rgb(218, 221, 230);
             background-color: rgb(240, 242, 247);
-            color: @color-gray;
-            font-size: 14px;
-            line-height: 1.4;
-            letter-spacing: -0.5px;
+            padding: 20px;
+            box-sizing: border-box;
+
+            img.profile-img {
+              width: 80px;
+              height: 80px;
+              display: block;
+              float: left;
+              margin-right: 20px;
+              border-radius: 50%;
+            }
+
+            div.summary {
+              float: left;
+
+              p.name {
+                color: @color-gray;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 40px;
+                text-align: left;
+              }
+
+              p.belong {
+                color: @color-sub;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 40px;
+                text-align: left;
+              }
+            }
+
+            div.score {
+              float: right;
+              width: 150px;
+              margin-top: 30px;
+
+              p.head {
+                color: @color-gray;
+                font-size: 16px;
+                margin-bottom: 5px;
+              }
+
+              p.body {
+                color: @color-main;
+                font-size: 20px;
+              }
+            }
+          }
+
+          .info-wrapper {
+            margin-top: 40px;
+            min-height: 110px;
+
+            .info {
+              float: left;
+              text-align: left;
+
+              &:not(:last-of-type) {
+                margin-right: 100px;
+              }
+
+              p.content {
+                color: @color-gray;
+                font-size: 16px;
+              }
+            }
+
+            .category-info,
+            .award-info {
+              width: 50%;
+              float: left;
+              text-align: left;
+
+              .category,
+              .award {
+                display: inline-block;
+                min-width: 50px;
+                padding: 0 10px;
+                margin-bottom: 10px;
+                border-radius: 4px;
+                color: #fff;
+                font-size: 16px;
+                line-height: 30px;
+                text-align: center;
+
+                &:not(:last-of-type) {
+                  margin-right: 10px;
+                }
+
+                &.category {
+                  background-color: @color-main;
+                }
+
+                &.award {
+                  background-color: @color-sub;
+                }
+              }
+            }
+          }
+
+          .pay-wrapper,
+          .comment-wrapper {
+            text-align: left;
+            margin-top: 40px;
+
+            p.content {
+              box-sizing: border-box;
+              padding: 15px;
+              border-radius: 4px;
+              min-height: 70px;
+              background-color: rgb(240, 242, 247);
+              border: 1px solid rgb(218, 221, 230);
+              color: @color-gray;
+              font-size: 14px;
+              line-height: 1.4;
+              letter-spacing: -0.5px;
+            }
+          }
+        }
+
+        &.review-wrapper {
+          ul.review-list {
+            text-align: left;
+            .review-line {
+              border-bottom: 1px solid #a0a0a0;
+              padding: 20px 0 20px 0;
+              .user-profile {
+                display: inline-block;
+                height: 50px;
+                padding: 0 0 15px 0;
+                .user-profile-img {
+                  float: left;
+                  height: 50px;
+                  width: 50px;
+                  border-radius: 70%;
+                  margin: 0 10px 0 0;
+                }
+                .user-profile-info {
+                  padding: 5px 0 0 0;
+                  display: inline-block;
+                  width: 100px;
+                  .user-profile-name {
+                    font-weight: bold;
+                  }
+                  .user-profile-date {
+                    font-size: 13px;
+                    color: #898989;
+                  }
+                }
+                .user-profile-star {
+                  display: inline-block;
+                  height: 30px;
+                  width: 120px;
+                  padding: 0 0 0 100px;
+                }
+              }
+              .box {
+                margin: 10px 0;
+                .content {
+                  margin: 10px 0;
+                  padding: 0;
+                  line-height: 20px;
+                }
+              }
+              .review-imgSize {
+                height: 100px;
+                width: 100px;
+              }
+              .review-btn-area button.button {
+                float: right;
+                margin: 0 10px 0 0;
+                &:first-of-type {
+                  margin-right: 0;
+                }
+              }
+            }
           }
         }
       }
@@ -283,8 +371,7 @@ ul.search-list {
   }
 }
 
-
-#searchIcon {
-  font-size: 100px;
-  color: red;
-}
+  #searchIcon {
+    font-size: 100px;
+    color: red;
+  }

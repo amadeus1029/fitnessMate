@@ -193,9 +193,11 @@ select:active {
 select {
   width: 150px;
 }
+a.button,
 button.button {
   display: block;
   background-color: #fff;
+  box-sizing: border-box;
   border-radius: 4px;
   border: 1px solid #292c33;
   min-width: 100px;
@@ -208,10 +210,12 @@ button.button {
   text-align: center;
   cursor: pointer;
 }
+a.button.main,
 button.button.main {
   color: #cc2121;
   border: 1px solid #cc2121;
 }
+a.button.sub,
 button.button.sub {
   color: #008526;
   border: 1px solid #008526;
@@ -275,12 +279,12 @@ h3.title {
   float: right;
   height: 50px;
 }
-#header .btn-area button.button {
+#header .btn-area a.button {
   float: left;
-  margin-top: 5px;
+  margin: 5px 0 0 0;
 }
-#header .btn-area button.button:first-of-type {
-  margin-right: 20px;
+#header .btn-area a.button:last-of-type {
+  margin-left: 20px;
 }
 #container {
   padding-top: 81px;

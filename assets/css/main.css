@@ -298,7 +298,7 @@ ul.search-list li.search-result .content-area p.score {
   text-align: center;
   border: 0;
   outline: none;
-  cursor: pointer ;
+  cursor: pointer;
 }
 #profileModal .modal-wrapper .label-wrapper button.label-btn.on {
   color: #cc2121;
@@ -310,13 +310,13 @@ ul.search-list li.search-result .content-area p.score {
 #profileModal .modal-wrapper .modal-content .label-tab.on {
   display: block;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .summary-wrapper {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .summary-wrapper {
   border: 1px solid #dadde6;
   background-color: #f0f2f7;
   padding: 20px;
   box-sizing: border-box;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .summary-wrapper img.profile-img {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .summary-wrapper img.profile-img {
   width: 80px;
   height: 80px;
   display: block;
@@ -324,62 +324,62 @@ ul.search-list li.search-result .content-area p.score {
   margin-right: 20px;
   border-radius: 50%;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .summary-wrapper div.summary {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .summary-wrapper div.summary {
   float: left;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .summary-wrapper div.summary p.name {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .summary-wrapper div.summary p.name {
   color: #292c33;
   font-size: 24px;
   font-weight: 700;
   line-height: 40px;
   text-align: left;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .summary-wrapper div.summary p.belong {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .summary-wrapper div.summary p.belong {
   color: #008526;
   font-size: 18px;
   font-weight: 500;
   line-height: 40px;
   text-align: left;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .summary-wrapper div.score {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .summary-wrapper div.score {
   float: right;
   width: 150px;
   margin-top: 30px;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .summary-wrapper div.score p.head {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .summary-wrapper div.score p.head {
   color: #292c33;
   font-size: 16px;
   margin-bottom: 5px;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .summary-wrapper div.score p.body {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .summary-wrapper div.score p.body {
   color: #cc2121;
   font-size: 20px;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper {
   margin-top: 40px;
   min-height: 110px;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .info {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .info {
   float: left;
   text-align: left;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .info:not(:last-of-type) {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .info:not(:last-of-type) {
   margin-right: 100px;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .info p.content {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .info p.content {
   color: #292c33;
   font-size: 16px;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info,
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .category-info,
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .award-info {
   width: 50%;
   float: left;
   text-align: left;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info .category,
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info .category,
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info .award,
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info .award {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .category-info .category,
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .award-info .category,
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .category-info .award,
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .award-info .award {
   display: inline-block;
   min-width: 50px;
   padding: 0 10px;
@@ -390,40 +390,97 @@ ul.search-list li.search-result .content-area p.score {
   line-height: 30px;
   text-align: center;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info .category:not(:last-of-type),
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info .category:not(:last-of-type),
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info .award:not(:last-of-type),
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info .award:not(:last-of-type) {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .category-info .category:not(:last-of-type),
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .award-info .category:not(:last-of-type),
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .category-info .award:not(:last-of-type),
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .award-info .award:not(:last-of-type) {
   margin-right: 10px;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info .category.category,
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info .category.category,
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info .award.category,
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info .award.category {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .category-info .category.category,
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .award-info .category.category,
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .category-info .award.category,
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .award-info .award.category {
   background-color: #cc2121;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info .category.award,
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info .category.award,
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .category-info .award.award,
-#profileModal .modal-wrapper .modal-content .label-tab .info-wrapper .award-info .award.award {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .category-info .category.award,
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .award-info .category.award,
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .category-info .award.award,
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .info-wrapper .award-info .award.award {
   background-color: #008526;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .pay-wrapper,
-#profileModal .modal-wrapper .modal-content .label-tab .comment-wrapper {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .pay-wrapper,
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .comment-wrapper {
   text-align: left;
   margin-top: 40px;
 }
-#profileModal .modal-wrapper .modal-content .label-tab .pay-wrapper p.content,
-#profileModal .modal-wrapper .modal-content .label-tab .comment-wrapper p.content {
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .pay-wrapper p.content,
+#profileModal .modal-wrapper .modal-content .label-tab.profile-wrapper .comment-wrapper p.content {
   box-sizing: border-box;
   padding: 15px;
   border-radius: 4px;
   min-height: 70px;
   background-color: #f0f2f7;
+  border: 1px solid #dadde6;
   color: #292c33;
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: -0.5px;
+}
+#profileModal .modal-wrapper .modal-content .label-tab.review-wrapper ul.review-list {
+  text-align: left;
+}
+#profileModal .modal-wrapper .modal-content .label-tab.review-wrapper ul.review-list .review-line {
+  border-bottom: 1px solid #a0a0a0;
+  padding: 20px 0 20px 0;
+}
+#profileModal .modal-wrapper .modal-content .label-tab.review-wrapper ul.review-list .review-line .user-profile {
+  display: inline-block;
+  height: 50px;
+  padding: 0 0 15px 0;
+}
+#profileModal .modal-wrapper .modal-content .label-tab.review-wrapper ul.review-list .review-line .user-profile .user-profile-img {
+  float: left;
+  height: 50px;
+  width: 50px;
+  border-radius: 70%;
+  margin: 0 10px 0 0;
+}
+#profileModal .modal-wrapper .modal-content .label-tab.review-wrapper ul.review-list .review-line .user-profile .user-profile-info {
+  padding: 5px 0 0 0;
+  display: inline-block;
+  width: 100px;
+}
+#profileModal .modal-wrapper .modal-content .label-tab.review-wrapper ul.review-list .review-line .user-profile .user-profile-info .user-profile-name {
+  font-weight: bold;
+}
+#profileModal .modal-wrapper .modal-content .label-tab.review-wrapper ul.review-list .review-line .user-profile .user-profile-info .user-profile-date {
+  font-size: 13px;
+  color: #898989;
+}
+#profileModal .modal-wrapper .modal-content .label-tab.review-wrapper ul.review-list .review-line .user-profile .user-profile-star {
+  display: inline-block;
+  height: 30px;
+  width: 120px;
+  padding: 0 0 0 100px;
+}
+#profileModal .modal-wrapper .modal-content .label-tab.review-wrapper ul.review-list .review-line .box {
+  margin: 10px 0;
+}
+#profileModal .modal-wrapper .modal-content .label-tab.review-wrapper ul.review-list .review-line .box .content {
+  margin: 10px 0;
+  padding: 0;
+  line-height: 20px;
+}
+#profileModal .modal-wrapper .modal-content .label-tab.review-wrapper ul.review-list .review-line .review-imgSize {
+  height: 100px;
+  width: 100px;
+}
+#profileModal .modal-wrapper .modal-content .label-tab.review-wrapper ul.review-list .review-line .review-btn-area button.button {
+  float: right;
+  margin: 0 10px 0 0;
+}
+#profileModal .modal-wrapper .modal-content .label-tab.review-wrapper ul.review-list .review-line .review-btn-area button.button:first-of-type {
+  margin-right: 0;
 }
 #searchIcon {
   font-size: 100px;
