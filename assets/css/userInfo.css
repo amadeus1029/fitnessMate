@@ -21,16 +21,26 @@ table{
 }
 
 tr{border-bottom: 1px solid #a0a0a0;}
-td{padding:5px 5px 5px 5px;;}
+td{padding:5px;}
 
 
 
 
 /*회원정보 구역*/
 .user-informationArea{width: 900px; height: auto;  float: right;  }   
+#plusButton{display: inline; margin:0 0 0 800px;  border:1px solid #cc2121;  
+}
+
 .user-information{width: 700px; height: auto;  margin:20px 0 20px 60px;}
+.informationBox{
+   width: 700px; height: auto; border:1px solid #a0a0a0; 
+   }
 
-#info{display: inline; margin:5px}
+#info{display: inline; margin:5px;  border:1px solid #a0a0a0; }
 
-.meb-profile{width: 40%; height: 40%; padding:10px 10px}
-#meb-info{font-weight: bold;}
+
+.box-img{width: 250px; height: 250px; padding:10px 10px }
+.box-text{width: 400px; height: auto; float: right;
+            margin:70px 10px 10px 10px;}
+
+.mem-info{margin:5px;}
