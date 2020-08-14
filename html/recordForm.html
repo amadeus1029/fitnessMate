@@ -24,105 +24,7 @@
 
     <!-- 해당 페이지 css -->
     <link rel="stylesheet" href="../assets/css/mypage.css">
-
-    <style>
-
-        .box_color {
-            border: 1px solid #292c33;
-            border-radius: 10PX;
-            width: 200px;
-            height: 450px;
-            padding: 10px;
-            line-height: 180%;
-            text-align: center;
-        }
-        .wrapper {
-            padding-left: 150px;
-            position: relative;
-            margin-bottom: 50px;
-        }
-        #first_select ol li{
-            cursor: pointer;
-        }
-        .wrapper ol li:hover{
-            background-color: #419ffe;
-        }
-        #second_select { 
-            position: absolute;
-            top: 50px;
-            left: 500px;
-        }
-        #second_select ol li{
-            cursor: pointer;
-        }
-        .third_record {
-            position: absolute;
-            top: 50px;
-            left: 850px;
-        }
-        input[type="text"]{
-            display: inline-block;
-            width: 80px;
-        }
-        .each {
-            position: relative;
-            width: 220px;
-            height: auto;
-            text-align:left;
-            padding: 7px 0px 0px 16px;
-            margin-bottom: 10px;
-        }
-        .box_color p{
-            line-height: 200%;
-            font-weight: 600;
-            font-size: 18px;
-            padding-bottom: 5px;
-            margin-bottom: 6px;
-            border-bottom: 1px solid #292c33;
-        }
-        div.each i{
-            font-size: 20px;
-        }
-        i.far{
-            cursor: pointer;
-        }
-        .box_color.each p{
-            float: left;
-            border-bottom: none;
-            padding-bottom: 0px;
-            margin-bottom: 0px;
-        }
-        i.setDelete{
-            position: absolute;
-            top: 5px;
-            right: 30px;
-            opacity: 0;
-        }
-        div.each:hover i.setDelete{
-            transition: all ease 0.5s 0s;
-            opacity: 1;
-        }
-        .float_wrap{
-            height: 40px;
-        }
-        button.btn_save {
-            position: absolute;
-            top: 0px;
-            right: 25px;
-        }
-        p.btn_toggle{
-            position: absolute;
-            top: -6px;
-            right: 7px;
-        }
-        .wrapper>p {
-            font-weight: 600;
-            font-size: 25px;
-            padding-bottom: 25px;
-        }
-
-
-    </style>
+	<link rel="stylesheet" href="../assets/css/recordForm.css">
 
     <title>write record</title>
 
@@ -183,19 +85,26 @@
                         <li>종아리</li>
                     </ol>
                 </div>
+
+                <div class="fir-arrow"><i class="fas fa-arrow-circle-right"></i></div>
+
                 <div id="second_select" class="box_color">
                     <p>운동 이름</p>
                     <ol>
 
                     </ol>  
                 </div>
+                
+                <div class="sec-arrow"><i class="fas fa-arrow-circle-right"></i></div>
+
                 <div class="third_record">
 
                 </div>
                 <button type="button" class="button sub btn_save">저장</button>
 
-            </div>
-        </form>
+        	</form>
+        </div>
+    </div>
 
     <footer id="footer">
         <div class="wrapper">
