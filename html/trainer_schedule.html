@@ -68,7 +68,7 @@
                             $(info.el).append(
                                 "<div class='btn_pop'>" +
                                 "<button type='button' class='button btn_modify' onclick='btnModify();'>스케쥴변경</button>" +
-                                "<button type='button' class='button'>운동시작</button>" +
+                                "<button type='button' class='button' onclick='startExercise();'>운동시작</button>" +
                                 "<div>"
                             );
                         },
@@ -553,7 +553,11 @@
         function btnModify() {
             $("select[name='hour']").find("option[value='9']").prop("selected", true);
             showModal("#addModal");
-        }        
+        }
+
+        function startExercise() {
+            location.href="recordForm.html";
+        }
     </script>
 </body>
 

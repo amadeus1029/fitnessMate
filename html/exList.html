@@ -165,10 +165,19 @@
     <!-- footer가 필요한 페이지에서 사용 -->
     <script type="text/javascript">
         function addExercise() {
+            var result = true;
             var form = $("form#addExercise");
             var part = form.find("select[name='part']").find("option:selected").text();
             var name = form.find("input[name='name']").val();
             var amount = form.find("input[name='amount']:checked").next("label").text();
+
+            if (name === "" || name == null) {
+                result = false;
+                alert("이름을 입력주세요");
+            }
+            if (!result) {
+                return result;
+            }
 
             $("#exerciseList").append(
                 "<div class='exercise'>" +
