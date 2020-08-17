@@ -387,3 +387,10 @@ form#editProfileForm .comment-wrapper textarea.content {
 form#editProfileForm button[type="submit"] {
   margin: 50px auto 0;
 }
+form#userSearchForm h3.title {
+  font-size: 24px;
+}
+form#userSearchForm .radio-wrapper {
+  float: left;
+  margin-right: 30px;
+}
