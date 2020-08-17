@@ -28,17 +28,19 @@
 
     <!-- 임시 style-->
     <style>
+
+    /*별*/
     .reviewWrite{ text-align: left;}
     #star_grade{margin: 10px 0 0 0;}
     #star_grade i{
         font-size: 0 0 10px 0;
         text-decoration: none;
         color: gray;
-       
     }
     #star_grade i.on{
         color: red;
-    }
+    }/*별*/
+
 
     .reviewWrite textarea{width: 800px; height: 100px; margin: 10px 0; padding:0px;}
     .button.revW{margin:0 0 0 700px;}
@@ -323,9 +325,27 @@
                     <div class="reviewWrite">
                         <span>리뷰작성</span>
                         
-                        <div id="star_grade"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                        
-                        <textarea class="content"  placeholder="사용하시면서 달라진 만족도에 대한 후기를 남겨주세요(최소 10자 이상)"></textarea>
+                        <div id="star_grade">
+                            <input type="hidden" name="star-input" value="1" id="p1"></input>
+                            <i for="p1" class="fas fa-star"></i>
+                            <input type="hidden" name="star-input" value="2" id="p2"></input>
+                            <i for="p2" class="fas fa-star"></i>
+                            <input type="hidden" name="star-input" value="3" id="p3"></input>
+                            <i for="p3" class="fas fa-star"></i>
+                            <input type="hidden" name="star-input" value="4" id="p4"></input>
+                            <i for="p4" class="fas fa-star"></i>
+                            <input type="hidden" name="star-input" value="5" id="p5"></input>
+                            <i for="p5" class="fas fa-star"></i>
+                        </div>
+                    
+
+
+
+
+                            <output for="star-input"><b>0</b>점</output>
+                       
+                        <textarea class="content" name='content' placeholder="사용하시면서 달라진 만족도에 대한 후기를 남겨주세요(최소 10자 이상)"></textarea>
 
                         <div>
 							<input  type="file" >
@@ -452,15 +472,22 @@
             return false;
         });
        
-        //+버튼 눌렀을 때 리뷰 추가
+        //버튼 눌렀을 때 리뷰 추가
         $(".button.revW").on("click", function(){
             console.log("클릭")
 
-    
+            var name ='김**';
+            var date = '운동기간-n개월';
+            var date2 = '2020-08-17';
+            var star = $("[name = 'star-input']").val();
+            var content = $("[name = 'content']").val();
 
-        $(this).closest("li").append(addSet);
+            console.log(content);
+            console.log(star);
+        
 
         });
+
 
 
 
