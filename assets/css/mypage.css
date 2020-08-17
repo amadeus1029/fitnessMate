@@ -271,3 +271,119 @@ form#addExercise button[type='submit'] {
   outline: none;
   cursor: pointer;
 }
+form#editProfileForm {
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #dadde6;
+  padding: 30px;
+  margin-bottom: 100px;
+}
+form#editProfileForm .main-info .main-info-wrapper {
+  float: left;
+  width: 240px;
+  margin-right: 100px;
+}
+form#editProfileForm .main-info .main-info-wrapper img.profile-img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+form#editProfileForm .main-info .main-info-wrapper button.change-btn {
+  float: left;
+  margin: 20px 0 0;
+  color: #fff;
+  background-color: #cc2121;
+  border: 0;
+}
+form#editProfileForm .main-info div.summary {
+  float: left;
+}
+form#editProfileForm .main-info div.summary p.name {
+  color: #292c33;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+}
+form#editProfileForm .main-info div.summary p.belong {
+  color: #008526;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: left;
+}
+form#editProfileForm .info-wrapper {
+  margin-top: 40px;
+  min-height: 110px;
+}
+form#editProfileForm .info-wrapper .info {
+  float: left;
+  text-align: left;
+}
+form#editProfileForm .info-wrapper .info:not(:last-of-type) {
+  margin-right: 100px;
+}
+form#editProfileForm .info-wrapper .category-info,
+form#editProfileForm .info-wrapper .award-info {
+  width: 50%;
+  float: left;
+  text-align: left;
+}
+form#editProfileForm .info-wrapper .category-info .category,
+form#editProfileForm .info-wrapper .award-info .category,
+form#editProfileForm .info-wrapper .category-info .award,
+form#editProfileForm .info-wrapper .award-info .award {
+  display: inline-block;
+  min-width: 50px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+}
+form#editProfileForm .info-wrapper .category-info .category:not(:last-of-type),
+form#editProfileForm .info-wrapper .award-info .category:not(:last-of-type),
+form#editProfileForm .info-wrapper .category-info .award:not(:last-of-type),
+form#editProfileForm .info-wrapper .award-info .award:not(:last-of-type) {
+  margin-right: 10px;
+}
+form#editProfileForm .info-wrapper .category-info .category.category,
+form#editProfileForm .info-wrapper .award-info .category.category,
+form#editProfileForm .info-wrapper .category-info .award.category,
+form#editProfileForm .info-wrapper .award-info .award.category {
+  background-color: #cc2121;
+}
+form#editProfileForm .info-wrapper .category-info .category.award,
+form#editProfileForm .info-wrapper .award-info .category.award,
+form#editProfileForm .info-wrapper .category-info .award.award,
+form#editProfileForm .info-wrapper .award-info .award.award {
+  background-color: #008526;
+}
+form#editProfileForm .pay-wrapper,
+form#editProfileForm .comment-wrapper {
+  text-align: left;
+  margin-top: 40px;
+}
+form#editProfileForm .pay-wrapper textarea.content,
+form#editProfileForm .comment-wrapper textarea.content {
+  display: block;
+  min-height: 100px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #f0f2f7;
+  border: 1px solid #dadde6;
+  color: #292c33;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+}
+form#editProfileForm button[type="submit"] {
+  margin: 50px auto 0;
+}

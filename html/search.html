@@ -37,15 +37,15 @@
             <nav id="nav">
             </nav>
             <div class="btn-area clearfix">
-                <button type="submit" class="button main">로그인</button>
-                <button type="button" class="button sub">회원가입</button>
+                <a href="index.html" class="button sub">로그아웃</a>
+                <a href="trainer_schedule.html" class="button main">마이페이지</a>
             </div>
         </div>
     </header>
     <!-- header가 필요한 페이지에서 사용 -->
 
     <div id="container">
-        <div class="test-background"style="background-color: #008526;height: 350px;">
+        <div class="test-background" style="background-color: #dadde6;height: 350px;">
         </div>
         <div class="wrapper">
             <form id="searchKeywordForm">
@@ -102,23 +102,99 @@
                 </ul>
                 <button type="submit" class="button">검색</button>
             </form>
-            <ul class="search-list">
-                <li class="search-result">
-                    <a href="#none">
-                        <div class="image-area" style="background-image: url('../assets/image/face/Gangho-dong.jpg');">
-                        </div>
-                        <div class="content-area">
-                            <p class="name">강호동</p>
-                            <p class="gym">하이미디어</p>
-                            <p class="comment"></p>
-                            <!--<ul class="field-list">
-                                <li>재활</li>
-                                <li>다이어트</li>
-                                <li>기초체력 향상</li>
-                            </ul>
-                            <p class="s-->core">4.7</p>
-                        </div>
-                    </a>
+            <ul class="search-list clearfix">
+                <li class="search-result" onclick="showProfileModal($(this))">
+                    <div class="image-area" style="background-image: url('../assets/image/face/Gangho-dong.jpg');">
+                    </div>
+                    <div class="content-area">
+                        <p class="name">강호동</p>
+                        <p class="gym">하이미디어</p>
+                        <p class="comment">국가의 세입·세출의 결산, 국가 및 법률이 정한 단체의 회계검사와 행정기관 및 공무원의 직무에 관한 감찰을 하기 위하여 대통령 소속하에
+                            감사원을 둔다. 국정의 중요한 사항에 관한 대통령의 자문에 응하기 위하여 국가원로로 구성되는 국가원로자문회의를 둘 수 있다. 모든 국민은 거주·이전의 자유를
+                            가진다.</p>
+                        <p class="score">평점 4.7</p>
+                    </div>
+                </li>
+                <li class="search-result" onclick="showProfileModal($(this))">
+                    <div class="image-area" style="background-image: url('../assets/image/face/Lee-Kwang-soo.jpg');">
+                    </div>
+                    <div class="content-area">
+                        <p class="name">이광수</p>
+                        <p class="gym">러닝맨</p>
+                        <p class="comment">정부는 회계연도마다 예산안을 편성하여 회계연도 개시 90일전까지 국회에 제출하고, 국회는 회계연도 개시 30일전까지 이를 의결하여야 한다.
+                            대통령후보자가 1인일 때에는 그 득표수가 선거권자 총수의 3분의 1 이상이 아니면 대통령으로 당선될 수 없다.</p>
+                        <p class="score">평점 4.2</p>
+                    </div>
+                </li>
+                <li class="search-result" onclick="showProfileModal($(this))">
+                    <div class="image-area" style="background-image: url('../assets/image/face/LeeHyoRi.jpg');">
+                    </div>
+                    <div class="content-area">
+                        <p class="name">이효리</p>
+                        <p class="gym">제주도</p>
+                        <p class="comment">모든 국민은 거주·이전의 자유를 가진다. 헌법에 의하여 체결·공포된 조약과 일반적으로 승인된 국제법규는 국내법과 같은 효력을 가진다.
+                            국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다.
+
+                        </p>
+                        <p class="score">평점 4.9</p>
+                    </div>
+                </li>
+                <li class="search-result" onclick="showProfileModal($(this))">
+                    <div class="image-area" style="background-image: url('../assets/image/face/Yoo-Jae-Suk.jpg');">
+                    </div>
+                    <div class="content-area">
+                        <p class="name">유재석</p>
+                        <p class="gym">무한도전</p>
+                        <p class="comment">행정각부의 설치·조직과 직무범위는 법률로 정한다. 대통령은 국가의 독립·영토의 보전·국가의 계속성과 헌법을 수호할 책무를 진다. 선거와
+                            국민투표의 공정한 관리 및 정당에 관한 사무를 처리하기 위하여 선거관리위원회를 둔다.</p>
+                        <p class="score">평점 4.5</p>
+                    </div>
+                </li>
+                <li class="search-result" onclick="showProfileModal($(this))">
+                    <div class="image-area" style="background-image: url('../assets/image/face/Jeongjae-Lee.jpg');">
+                    </div>
+                    <div class="content-area">
+                        <p class="name">이정재</p>
+                        <p class="gym">골드문</p>
+                        <p class="comment">감사원은 세입·세출의 결산을 매년 검사하여 대통령과 차년도국회에 그 결과를 보고하여야 한다. 모든 국민은 사생활의 비밀과 자유를 침해받지
+                            아니한다.</p>
+                        <p class="score">평점 3.8</p>
+                    </div>
+                </li>
+                <li class="search-result" onclick="showProfileModal($(this))">
+                    <div class="image-area" style="background-image: url('../assets/image/face/Yang-Se-chan.jpg');">
+                    </div>
+                    <div class="content-area">
+                        <p class="name">양세찬</p>
+                        <p class="gym">아 모르겠다</p>
+                        <p class="comment">국가는 대외무역을 육성하며, 이를 규제·조정할 수 있다. 모든 국민은 법률이 정하는 바에 의하여 국가기관에 문서로 청원할 권리를 가진다.
+                            군인은 현역을 면한 후가 아니면 국무위원으로 임명될 수 없다.
+                        </p>
+                        <p class="score">평점 4.2</p>
+                    </div>
+                </li>
+                <li class="search-result" onclick="showProfileModal($(this))">
+                    <div class="image-area" style="background-image: url('../assets/image/face/Park-Myung- Soo.jpg');">
+                    </div>
+                    <div class="content-area">
+                        <p class="name">박명수</p>
+                        <p class="gym">무한도전</p>
+                        <p class="comment">대통령은 조약을 체결·비준하고, 외교사절을 신임·접수 또는 파견하며, 선전포고와 강화를 한다. 국가는 농지에 관하여 경자유전의 원칙이
+                            달성될 수 있도록 노력하여야 하며, 농지의 소작제도는 금지된다.
+                        </p>
+                        <p class="score">평점 2.8</p>
+                    </div>
+                </li>
+                <li class="search-result" onclick="showProfileModal($(this))">
+                    <div class="image-area" style="background-image: url('../assets/image/face/JungWooSung.jpg');">
+                    </div>
+                    <div class="content-area">
+                        <p class="name">정우성</p>
+                        <p class="gym">비트</p>
+                        <p class="comment">정당은 그 목적·조직과 활동이 민주적이어야 하며, 국민의 정치적 의사형성에 참여하는데 필요한 조직을 가져야 한다. 법관은 탄핵 또는 금고
+                            이상의 형의 선고에 의하지 아니하고는 파면되지 아니하며, 징계처분에 의하지 아니하고는 정직·감봉 기타 불리한 처분을 받지 아니한다.</p>
+                        <p class="score">평점 3.5</p>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -150,5 +226,181 @@
         </div>
     </footer>
     <!-- footer가 필요한 페이지에서 사용 -->
+    <div class="modal-layer" id="profileModal">
+        <div class="modal-wrapper">
+            <button type="button" class="close-btn" onclick="forceHideModal('#profileModal')">X</button>
+            <div class="label-wrapper clearfix">
+                <button type="button" class="label-btn profile-btn on" data-tab="profile" onclick="showTab($(this))">프로필</button>
+                <button type="button" class="label-btn review-btn" data-tab="review" onclick="showTab($(this))">리뷰</button>
+                <button type="button" class="label-btn location-btn" data-tab="location" onclick="showTab($(this))">위치</button>
+            </div>
+            <div class="modal-content">
+                <div class="label-tab profile-wrapper on">
+                    <div class="summary-wrapper clearfix">
+                        <img src="../assets/image/face/Park-Myung- Soo.jpg" class="profile-img">
+                        <div class="summary">
+                            <p class="name">박명수</p>
+                            <p class="belong">무한도전 피트니스짐</p>
+                        </div>
+                        <div class="score">
+                            <p class="head">평점</p>
+                            <p class="body">4.7점</p>
+                        </div>
+                        <div class="score">
+                            <p class="head">리뷰수</p>
+                            <p class="body">117개</p>
+                        </div>
+                    </div>
+                    <div class="info-wrapper clearfix">
+                        <div class="info">
+                            <h3 class="title">나이</h3>
+                            <p class="content">42세</p>
+                        </div>
+                        <div class="info">
+                            <h3 class="title">성별</h3>
+                            <p class="content">남성</p>
+                        </div>
+                        <div class="info">
+                            <h3 class="title">지역</h3>
+                            <p class="content">서울특별시 강남구 압구정동</p>
+                        </div>
+                        <div class="info">
+                            <h3 class="title">트레이너 경력</h3>
+                            <p class="content">12년</p>
+                        </div>
+                    </div>
+                    <div class="info-wrapper clearfix">
+                        <div class="category-info">
+                            <h3 class="title">전문분야</h3>
+                            <span class="category">다이어트</span>
+                            <span class="category">재활</span>
+                            <span class="category">프로필 촬영</span>
+                        </div>
+                        <div class="award-info">
+                            <h3 class="title">입상경력</h3>
+                            <span class="award">머슬마니아 3위</span>
+                            <span class="award">전국체전 우수상</span>
+                            <span class="award">체육관 개근상</span>
+                            <span class="award">무사고 12년</span>
+                        </div>
+                    </div>
+                    <div class="pay-wrapper">
+                        <h3 class="title">비용</h3>
+                        <p class="content">10회 이상 신청시 회당 5만원<br>20회 이상 신청시 회당 4만원<br>30회 이상 신청 시 회당 3만원</p>
+                    </div>
+                    <div class="comment-wrapper">
+                        <h3 class="title">트레이너 메세지</h3>
+                        <p class="content">정당은 그 목적·조직과 활동이 민주적이어야 하며, 국민의 정치적 의사형성에 참여하는데 필요한 조직을 가져야 한다. 법관은 탄핵 또는 금고
+                            이상의 형의 선고에 의하지 아니하고는 파면되지 아니하며, 징계처분에 의하지 아니하고는 정직·감봉 기타 불리한 처분을 받지 아니한다.</p>
+                    </div>
+                </div>
+                <div class="label-tab review-wrapper">
+                    <ul class="review-list">
+                        <li class="review-line">
+
+
+                            <div class="user-profile">
+
+                                <img class="user-profile-img" src='../assets/image/unnamed.jpg' );>
+
+                                <div class="user-profile-info">
+                                    <div class="user-profile-name">김**</div>
+                                    <div class="user-profile-date">운동기간- n개월</div>
+                                    <div class="user-profile-date">2020-08-11</div>
+                                </div>
+                                <div class="user-profile-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="box">
+                                <div class="content">여긴 리뷰내용 쓰는 곳입니다.
+                                    리뷰내용은 쏼라쏼라쏼라입니다.<br>
+                                    가나다라마바사아자차카타파하아야어여오요우유 으이~
+                                </div>
+                            </div>
+
+                            <img class="review-imgSize" onclick="showModal('#testModal')"
+                                 src='../assets/image/unnamed.jpg'
+                                 );>
+                            <img class="review-imgSize" onclick="showModal('#testModal')"
+                                 src='../assets/image/main-test-02.jpg' );>
+                            <img class="review-imgSize" onclick="showModal('#testModal')"
+                                 src='../assets/image/review-test2.jpg' );>
+                            <div class="clearfix review-btn-area">
+                                <button type="button" class="button">삭제</button>
+                                <button type="button" class="button">수정</button>
+                            </div>
+                        </li>
+                        <li class="review-line">
+
+                            <div class="user-profile">
+
+                                <img class="user-profile-img" src='../assets/image/review-test2.jpg' );>
+
+                                <div class="user-profile-info">
+                                    <div class="user-profile-name">이**</div>
+                                    <div class="user-profile-date">운동기간- n개월</div>
+                                    <div class="user-profile-date">2020-08-11</div>
+                                </div>
+                                <div class="user-profile-star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="content">여긴 리뷰내용 쓰는 곳입니다.
+                                    리뷰내용은 쏼라쏼라쏼라입니다.<br>
+                                    이 트레이너분 맨날 하나만 더라면서 열 번 더시킵니다.<br>
+                                    완전 사기꾼이예요.
+                                </div>
+                            </div>
+                            <div class="clearfix review-btn-area">
+                                <button type="button" class="button">삭제</button>
+                                <button type="button" class="button">수정</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="label-tab location-wrapper">위치</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showProfileModal(obj) {
+            //다른 버튼 on 제거
+            $("#profileModal .label-wrapper .label-btn").removeClass("on");
+            $("#profileModal .label-wrapper .profile-btn").addClass("on");
+            //다른 탭 on 제거
+            $("#profileModal .label-tab").removeClass("on");
+            $("#profileModal .profile-wrapper").addClass("on");
+            showModal("#profileModal");
+        }
+
+        function showTab(target) {
+            var targetTab = target.attr("data-tab");
+
+            //다른 버튼 on 제거
+            $(".label-wrapper .label-btn").removeClass("on");
+            //다른 탭 on 제거
+            $(".label-tab").removeClass("on");
+
+            //label에 on
+            target.addClass("on");
+
+            //tab에 on
+            $("#profileModal").find("." + targetTab + "-wrapper").addClass("on");
+
+        }
+    </script>
 </body>
 </html>
