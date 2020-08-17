@@ -125,6 +125,8 @@ p.btn_toggle {
 input[type="text"] {
 	display: inline-block;
 	width: 80px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .float_wrap {
@@ -135,5 +137,10 @@ button.btn_save {
 	position: absolute;
 	top: 0px;
 	right: 100px;
+}
+
+.setPart div input{
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
