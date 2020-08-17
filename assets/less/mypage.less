@@ -253,9 +253,131 @@ form#editProfileForm {
 form#userSearchForm {
   h3.title {
     font-size: 24px;
+    margin-bottom: 15px;
   }
   .radio-wrapper {
     float: left;
     margin-right: 30px;
+  }
+}
+ul.user-list {
+  margin-top: 50px;
+  &.off {
+    display: none;
+  }
+  li.user {
+    float: left;
+    width: ~"calc((100% - 90px) / 4)";
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid rgb(218, 221, 230);
+    height: 80px;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    &:not(:nth-child(4n)) {
+      margin-right: 30px;
+    }
+    &:hover {
+      background-color: rgba(0, 138, 38, 0.5);
+      transition: 0.5s;
+    }
+    img {
+      float: left;
+      display: block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    p.info {
+      float: left;
+      span.name {
+        display: block;
+        line-height: 30px;
+        font-size: 20px;
+        font-weight: 500;
+        color: @color-gray;
+      }
+      span.id {
+        display: block;
+        line-height: 30px;
+        font-size: 16px;
+        color: @color-gray-sub;
+      }
+    }
+  }
+}
+
+
+#userInfoModal {
+  .modal-wrapper {
+    position: relative;
+    width: 800px;
+    padding: 30px;
+    overflow: visible;
+    border-radius: 4px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 90%;
+      height: 20px;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+    }
+
+    button.close-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background-color: transparent;
+      border: 0;
+      font-size: 32px;
+      font-weight: 700;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .label-wrapper {
+      position: absolute;
+      left: 0;
+      top: -32px;
+      overflow: hidden;
+      z-index: -1;
+      border-radius: 10px;
+
+      button.label-btn {
+        display: block;
+        float: left;
+        width: 100px;
+        height: 40px;
+        background-color: @color-main;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+
+        &.on {
+          color: @color-main;
+          background-color: #fff;
+        }
+      }
+    }
+
+    .modal-content {
+      .label-tab {
+        display: none;
+
+        &.on {
+          display: block;
+        }
+      }
+    }
   }
 }

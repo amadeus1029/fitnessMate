@@ -389,8 +389,117 @@ form#editProfileForm button[type="submit"] {
 }
 form#userSearchForm h3.title {
   font-size: 24px;
+  margin-bottom: 15px;
 }
 form#userSearchForm .radio-wrapper {
   float: left;
   margin-right: 30px;
+}
+ul.user-list {
+  margin-top: 50px;
+}
+ul.user-list.off {
+  display: none;
+}
+ul.user-list li.user {
+  float: left;
+  width: calc((100% - 90px) / 4);
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #dadde6;
+  height: 80px;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+ul.user-list li.user:not( :nth-child(4n)) {
+  margin-right: 30px;
+}
+ul.user-list li.user:hover {
+  background-color: rgba(0, 138, 38, 0.5);
+  transition: 0.5s;
+}
+ul.user-list li.user img {
+  float: left;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+ul.user-list li.user p.info {
+  float: left;
+}
+ul.user-list li.user p.info span.name {
+  display: block;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #292c33;
+}
+ul.user-list li.user p.info span.id {
+  display: block;
+  line-height: 30px;
+  font-size: 16px;
+  color: #45474d;
+}
+#userInfoModal .modal-wrapper {
+  position: relative;
+  width: 800px;
+  padding: 30px;
+  overflow: visible;
+  border-radius: 4px;
+}
+#userInfoModal .modal-wrapper:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 90%;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+#userInfoModal .modal-wrapper button.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: transparent;
+  border: 0;
+  font-size: 32px;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+}
+#userInfoModal .modal-wrapper .label-wrapper {
+  position: absolute;
+  left: 0;
+  top: -32px;
+  overflow: hidden;
+  z-index: -1;
+  border-radius: 10px;
+}
+#userInfoModal .modal-wrapper .label-wrapper button.label-btn {
+  display: block;
+  float: left;
+  width: 100px;
+  height: 40px;
+  background-color: #cc2121;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+#userInfoModal .modal-wrapper .label-wrapper button.label-btn.on {
+  color: #cc2121;
+  background-color: #fff;
+}
+#userInfoModal .modal-wrapper .modal-content .label-tab {
+  display: none;
+}
+#userInfoModal .modal-wrapper .modal-content .label-tab.on {
+  display: block;
 }
