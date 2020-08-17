@@ -58,7 +58,6 @@
                         // showNonCurrentDates: false,
                         dateClick: function (info) {
                             //TODO - 날짜 클릭시 발생 이벤트
-                            console.log("날짜누름");
                             showModal("#addModal");
 
                         },
@@ -66,8 +65,7 @@
                             //TODO - 일정 클릭시 발생 이벤트
                             event.stopPropagation();
                             $(".btn_pop").remove();
-                            console.log("일정누름");
-                            $(info.el).parent().append(
+                            $(info.el).append(
                                 "<div class='btn_pop'>" +
                                 "<button type='button' class='button btn_modify' onclick='btnModify();'>스케쥴변경</button>" +
                                 "<button type='button' class='button'>운동시작</button>" +
@@ -548,7 +546,7 @@
             //화면 아무곳이나 클릭시 스케쥴 팝업 제거
             $(window).on("click",function () {
                 $(".btn_pop").remove();
-                
+
             });
         });//레디함수종료
 
