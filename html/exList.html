@@ -92,7 +92,7 @@
                         <label for="amountTime">시간(초)</label>
                     </div>
                 </div>
-                <button type="submit" class="button main">추가</button>
+                <button type="button" class="button main add-exercise" onclick="addExercise();">추가</button>
             </form>
             <div id="exerciseList">
                 <h2>운동 목록</h2>
@@ -102,7 +102,8 @@
                         <span class="part">운동부위 : 코어</span>
                         <span class="amount">기록단위 : 킬로그램</span>
                     </p>
-                    <button type="button" class="delete-btn"><i class="fas fa-times"></i></button>
+                    <button type="button" class="delete-btn" onclick="deleteExercise($(this));"><i
+                            class="fas fa-times"></i></button>
                 </div>
                 <div class="exercise">
                     <h4 class="title">벤치프레스</h4>
@@ -110,7 +111,8 @@
                         <span class="part">운동부위 : 가슴</span>
                         <span class="amount">기록단위 : 파운드</span>
                     </p>
-                    <button type="button" class="delete-btn"><i class="fas fa-times"></i></button>
+                    <button type="button" class="delete-btn"><i class="fas fa-times"
+                                                                onclick="deleteExercise($(this));"></i></button>
                 </div>
                 <div class="exercise">
                     <h4 class="title">스쿼트</h4>
@@ -118,7 +120,8 @@
                         <span class="part">운동부위 : 하체</span>
                         <span class="amount">기록단위 : 킬로그램</span>
                     </p>
-                    <button type="button" class="delete-btn"><i class="fas fa-times"></i></button>
+                    <button type="button" class="delete-btn"><i class="fas fa-times"
+                                                                onclick="deleteExercise($(this));"></i></button>
                 </div>
                 <div class="exercise">
                     <h4 class="title">매달리기</h4>
@@ -126,7 +129,8 @@
                         <span class="part">운동부위 : 등</span>
                         <span class="amount">기록단위 : 시간(초)</span>
                     </p>
-                    <button type="button" class="delete-btn"><i class="fas fa-times"></i></button>
+                    <button type="button" class="delete-btn"><i class="fas fa-times"
+                                                                onclick="deleteExercise($(this));"></i></button>
                 </div>
             </div>
         </div>
@@ -159,5 +163,30 @@
         </div>
     </footer>
     <!-- footer가 필요한 페이지에서 사용 -->
+    <script type="text/javascript">
+        function addExercise() {
+            var form = $("form#addExercise");
+            var part = form.find("select[name='part']").find("option:selected").text();
+            var name = form.find("input[name='name']").val();
+            var amount = form.find("input[name='amount']:checked").next("label").text();
+
+            $("#exerciseList").append(
+                "<div class='exercise'>" +
+                "<h4 class='title'>" + name + "</h4>" +
+                "<p class='detail'>" +
+                "<span class='part'>운동부위 : " + part + "</span>" +
+                "<span class='amount'>기록단위 : " + amount + "</span>" +
+                "</p>" +
+                "<button type='button' class='delete-btn' onclick='deleteExercise($(this))'>" +
+                "<i class='fas fa-times'></i>" +
+                "</button>" +
+                "</div>"
+            );
+        }
+
+        function deleteExercise(target) {
+            target.parent("div.exercise").remove();
+        }
+    </script>
 </body>
 </html>

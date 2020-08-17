@@ -228,7 +228,7 @@ form#addExercise .input-box {
   margin-bottom: 50px;
   text-align: left;
 }
-form#addExercise button[type='submit'] {
+form#addExercise button.add-exercise {
   display: inline-block;
 }
 #exerciseList {
