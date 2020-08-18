@@ -473,7 +473,9 @@
             var date2 = '2020-08-17';
             var star = $("input[name='reviewScore']").val();
             var content = $("[name = 'content']").val();
+            var i =0;
             
+            while(i<=star){i+document.write('<i class="fas fa-star"></i>');}
         
            
              
@@ -483,12 +485,13 @@
                 " <div class='user-profile'>"+
                 "   <img class='user-profile-img' src='../assets/image/review-test2.jpg' );>"+
                 "   <div class='user-profile-info'>"+
-                "    <div class='user-profile-name'>"+name+"</div>"+
-                "    <div class='user-profile-date'>"+date+"</div>"+
-                "    <div class='user-profile-date'>"+date2+"</div>"+
-                " </div>"+
-                +star+" <div class='user-profile-star'>"+
-                        "</div>"+ "</div>"+
+                "     <div class='user-profile-name'>"+name+"</div>"+
+                "     <div class='user-profile-date'>"+date+"</div>"+
+                "     <div class='user-profile-date'>"+date2+"</div>"+
+                "   </div>"+
+                        +star+" <div class='user-profile-star'>"+sum()+
+                        "</div>"+ 
+                 "</div>"+
                 " <div class='box'>"+
                 "   <div class='content'>"+content+"</div>"+
                   "</div>"+
@@ -498,8 +501,10 @@
                 " </div>"+
                 "</li>"
             ); 
-        
 
+            var star = $("input[name='reviewScore']").val("");
+            var content = $("[name = 'content']").val("");
+            $('#star_grade i').removeClass("on"); 
        
         });
 
