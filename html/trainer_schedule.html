@@ -58,21 +58,21 @@
                         // showNonCurrentDates: false,
                         dateClick: function (info) {
                             //TODO - 날짜 클릭시 발생 이벤트
-                            alert(info.dateStr + "를 클릭하셨습니다.");
+                            showModal("#addModal");
 
                         },
                         eventClick: function (info) {
                             //TODO - 일정 클릭시 발생 이벤트
                             event.stopPropagation();
                             $(".btn_pop").remove();
-                            $(info.el).parent().append(
+                            $(info.el).append(
                                 "<div class='btn_pop'>" +
-                                "<button type='button' class='button'>스케쥴변경</button>" +
-                                "<button type='button' class='button'>운동시작</button>" +
+                                "<button type='button' class='button btn_modify' onclick='btnModify();'>스케쥴변경</button>" +
+                                "<button type='button' class='button' onclick='startExercise();'>운동시작</button>" +
                                 "<div>"
                             );
                         },
-                        height: '1200px',
+                        height: 'auto',
                         overflow: 'visible',
                         events: [
                             {
@@ -294,8 +294,8 @@
         .btn_pop {
             position: absolute;
             z-index: 999;
-            top: -40px;
-            right: 0;
+            top: -60px;
+            right: -80px;
             background-color: #fff;
             border: 1px solid #292c33;
             -webkit-transform: translate3d(0, 0, 0);
@@ -306,8 +306,11 @@
         .btn_pop button.button {
             border-radius: 0;
             margin: 0;
-            width: 100px;
+            width: 120px;
             border: 0;
+        }
+        .btn_pop button.button:hover {
+            background-color: #dadde6;
         }
 
         .fc .fc-scroller-harness {
@@ -347,7 +350,7 @@
             <ul class="menu clearfix">
                 <li><a href="trainer_schedule.html">스케쥴</a></li>
                 <li><a href="exList.html">운동 관리</a></li>
-                <li><a href="userInfo.html">회원 관리</a></li>
+                <li><a href="userList.html">회원 관리</a></li>
                 <li><a href="trainer_profile.html">프로필</a></li>
             </ul>
         </div>
@@ -538,13 +541,26 @@
             </div>
         </div>
     </div>
+
+    
+
     <script>
         $(document).ready(function () {
             //화면 아무곳이나 클릭시 스케쥴 팝업 제거
             $(window).on("click",function () {
                 $(".btn_pop").remove();
+
             });
         });//레디함수종료
+
+        function btnModify() {
+            $("select[name='hour']").find("option[value='9']").prop("selected", true);
+            showModal("#addModal");
+        }
+
+        function startExercise() {
+            location.href="recordForm.html";
+        }
     </script>
 </body>
 

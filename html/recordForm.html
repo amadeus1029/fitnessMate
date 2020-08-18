@@ -57,7 +57,7 @@
             <ul class="menu clearfix">
                 <li><a href="trainer_schedule.html">스케쥴</a></li>
                 <li><a href="exList.html">운동 관리</a></li>
-                <li><a href="userInfo.html">회원 관리</a></li>
+                <li><a href="userList.html">회원 관리</a></li>
                 <li><a href="trainer_profile.html">프로필</a></li>
             </ul>
         </div>
@@ -133,16 +133,17 @@
         </div>
     </footer>
     <!-- footer가 필요한 페이지에서 사용 -->
-    <script>
-        $(document).ready(function () {
-            $("a#testMenu").click(function(event){
-                event.preventDefault();
-                $(this).find(".menu").toggle();
-            });
-        });//레디함수종료
-    </script>
+
 </body>
+
 <script type="text/javascript">
+
+$(document).ready(function () {
+    $("a#testMenu").click(function(event){
+        event.preventDefault();
+        $(this).find(".menu").toggle();
+    });
+});//레디함수종료
 
 //두번째 리스트 보여주기
 $("#first_select ol li").on("click", function(){
@@ -175,9 +176,11 @@ $("#second_select ol").on("click", "li", function(){
     recordBox += '        <i class="far fa-minus-square setDelete"></i>';
     recordBox += '    </div>';
     recordBox += '    <div class="setPart">';
-    recordBox += '        <input type="text" name="weight" placeholder="무게">';
-    recordBox += '        <input type="text" name="count" placeholder="횟수">';
-    recordBox += '        <i class="far fa-plus-square"></i>';
+    recordBox += '        <div>';
+    recordBox += '            <input type="text" name="weight" placeholder="무게">';
+    recordBox += '            <input type="text" name="count" placeholder="횟수">';
+    recordBox += '            <i class="far fa-plus-square"></i>';
+    recordBox += '        </div>';
     recordBox += '    </div>';
     recordBox += '</div>';
 
@@ -193,13 +196,13 @@ $(".third_record").on("click", "i.setDelete", function(){
 $(".third_record").on("click", "i.fa-plus-square", function(){
 
     var addSet = '';
-    addSet += '<div class="setPart">';
-    addSet += '<input type="text" name="weight" placeholder="무게">';
-    addSet += '<input type="text" name="count" placeholder="횟수">';
-    addSet += '<i class="far fa-minus-square delSet"></i>';
+    addSet += '<div>';
+    addSet += '    <input type="text" name="weight" placeholder="무게">';
+    addSet += '    <input type="text" name="count" placeholder="횟수">';
+    addSet += '    <i class="far fa-minus-square delSet"></i>';
     addSet += '</div>';
 
-    $(this).closest("div").append(addSet);
+    $(this).closest(".setPart").append(addSet);
 
 });
 
