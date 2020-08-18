@@ -324,7 +324,7 @@
                 </div>
                 <div class="label-tab review-wrapper">
 
-                    <form class="reviewWrite">
+                    <div class="reviewWrite">
                         <span>리뷰작성</span>
                         
                        
@@ -340,13 +340,13 @@
                         <textarea class="content" name='content' placeholder="사용하시면서 달라진 만족도에 대한 후기를 남겨주세요(최소 10자 이상)"></textarea>
 
                         <div>
-                            <input  type="file" id="file"  name="file_name" class="image_inputType_file"  multiple>
+                            <input  type="file" id="file"  name="file_name" class="image_inputType_file" >
                            
                         </div>
                         
                         <button class="button revW" type="submit">작성</button>
 
-                    </form>
+                    </div>
 
 
                     <ul class="review-list">
@@ -479,9 +479,6 @@
             var img = $("#file").val();
             
             
-            
-            
-            
             $(".review-list").prepend(
                 "<li class='review-line'>"+
                 " <div class='user-profile ff'>"+
@@ -514,10 +511,6 @@
                     '<i class="far fa-star"></i>'  
                 );
             }
-            
-        
-
-
             var star = $("input[name='reviewScore']").val("");
             var content = $("[name = 'content']").val("");
             $('#star_grade i').removeClass("on"); 
