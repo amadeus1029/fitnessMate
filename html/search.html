@@ -40,6 +40,8 @@
     #star_grade i.on{
         color: red;
     }/*별*/
+    .fd{float: right;}
+    .ff{width: 800px;}
 
 
     .reviewWrite textarea{width: 800px; height: 100px; margin: 10px 0; padding:0px;}
@@ -338,7 +340,7 @@
                         <textarea class="content" name='content' placeholder="사용하시면서 달라진 만족도에 대한 후기를 남겨주세요(최소 10자 이상)"></textarea>
 
                         <div>
-							<input  type="file" >
+							<input  type="file" id="file" value="">
                         </div>
                         
                         <button class="button revW" type="submit">작성</button>
@@ -350,7 +352,7 @@
                         <li class="review-line">
 
 
-                            <div class="user-profile">
+                            <div class="user-profile ff">
 
                                 <img class="user-profile-img" src='../assets/image/unnamed.jpg' );>
 
@@ -359,7 +361,7 @@
                                     <div class="user-profile-date">운동기간- n개월</div>
                                     <div class="user-profile-date">2020-08-11</div>
                                 </div>
-                                <div class="user-profile-star">
+                                <div class="user-profile-star fd">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -390,7 +392,7 @@
                         </li>
                         <li class="review-line">
 
-                            <div class="user-profile">
+                            <div class="user-profile ff">
 
                                 <img class="user-profile-img" src='../assets/image/review-test2.jpg' );>
 
@@ -399,7 +401,7 @@
                                     <div class="user-profile-date">운동기간- n개월</div>
                                     <div class="user-profile-date">2020-08-11</div>
                                 </div>
-                                <div class="user-profile-star">
+                                <div class="user-profile-star fd" >
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -473,25 +475,21 @@
             var date2 = '2020-08-17';
             var star = $("input[name='reviewScore']").val();
             var content = $("[name = 'content']").val();
-            var i =0;
+            var img = $("#file").val();
             
-           
             
-        
-           
-             
-
+            
             $(".review-list").prepend(
                 "<li class='review-line'>"+
-                " <div class='user-profile'>"+
+                " <div class='user-profile ff'>"+
                 "   <img class='user-profile-img' src='../assets/image/review-test2.jpg' );>"+
                 "   <div class='user-profile-info'>"+
                 "     <div class='user-profile-name'>"+name+"</div>"+
                 "     <div class='user-profile-date'>"+date+"</div>"+
                 "     <div class='user-profile-date'>"+date2+"</div>"+
                 "   </div>"+
-                        +star+" <div class='user-profile-star'>"+
-                        "</div>"+ 
+                        "<div class='user-profile-star fd'>"+
+                        "</div>"+
                  "</div>"+
                 " <div class='box'>"+
                 "   <div class='content'>"+content+"</div>"+
@@ -502,6 +500,17 @@
                 " </div>"+
                 "</li>"
             ); 
+            for(var i = 0; i<star; i++){
+                $(".review-list li:first-child .user-profile-star").append(
+                    '<i class="fas fa-star"></i>'  
+                );
+            }
+            for(var i = 0; i<5-star; i++){
+                $(".review-list li:first-child .user-profile-star").append(
+                    '<i class="far fa-star"></i>'  
+                );
+            }
+
 
             var star = $("input[name='reviewScore']").val("");
             var content = $("[name = 'content']").val("");
@@ -510,7 +519,7 @@
         });
 
         
-
+        
 
     </script>
 </body>
