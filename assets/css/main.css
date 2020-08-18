@@ -486,3 +486,6 @@ ul.search-list li.search-result .content-area p.score {
   font-size: 100px;
   color: red;
 }
+.modal-wrapper {
+  width: 380px;
+}
