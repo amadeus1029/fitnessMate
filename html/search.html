@@ -324,12 +324,12 @@
                 </div>
                 <div class="label-tab review-wrapper">
 
-                    <div class="reviewWrite">
+                    <form class="reviewWrite">
                         <span>리뷰작성</span>
                         
                        
                         <div id="star_grade">
-                            <input type="hidden" name="reviewScore" value="0">
+                            <input type="hidden"  name="reviewScore" value="0">
                             <i for="p1" class="fas fa-star" data-score="1"></i>
                             <i for="p2" class="fas fa-star" data-score="2"></i>
                             <i for="p3" class="fas fa-star" data-score="3"></i>
@@ -340,12 +340,13 @@
                         <textarea class="content" name='content' placeholder="사용하시면서 달라진 만족도에 대한 후기를 남겨주세요(최소 10자 이상)"></textarea>
 
                         <div>
-							<input  type="file" id="file" value="">
+                            <input  type="file" id="file"  name="file_name" class="image_inputType_file"  multiple>
+                           
                         </div>
                         
                         <button class="button revW" type="submit">작성</button>
 
-                    </div>
+                    </form>
 
 
                     <ul class="review-list">
@@ -479,6 +480,8 @@
             
             
             
+            
+            
             $(".review-list").prepend(
                 "<li class='review-line'>"+
                 " <div class='user-profile ff'>"+
@@ -494,6 +497,7 @@
                 " <div class='box'>"+
                 "   <div class='content'>"+content+"</div>"+
                   "</div>"+
+                  '<img class="review-imgSize" src="");>'+
                 " <div class='clearfix review-btn-area'>"+
                 "   <button type='button' class='button'>삭제</button>"+
                 "   <button type='button' class='button'>수정</button>"+
@@ -510,6 +514,8 @@
                     '<i class="far fa-star"></i>'  
                 );
             }
+            
+        
 
 
             var star = $("input[name='reviewScore']").val("");
