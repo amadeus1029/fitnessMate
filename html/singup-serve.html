@@ -27,8 +27,8 @@
 
 
     <style>
-        .signup-form{  height: auto;
-  padding: 20px 20px 0; margin:50px 0 100px 700px;}
+        .signup-form{  height: auto; width: 800px;
+  padding: 20px 20px 0; margin: 20px auto;}
     </style>
 
 
@@ -54,17 +54,20 @@
 
     <div id="container">
 
-        <form class="signup-form" action="#" method="get">
+        
 
+        <form class="signup-form" action="#" method="get">
+            <h3>추가정보</h3>
+
+            <!-- 경력 -->
             <div class="form-group">     
-                <!-- 경력 -->
-                <label for="txt-id" class="form-text">경력</label>
+                <label>경력</label>
                 <input type="number" name="career" value="12" placeholder="경력을 입력하세요">
             </div>    
 
+             <!-- 지역 -->
             <div class="form-group">    
-                <!-- 패스워드 -->
-                <label for="txt-pw" class="form-text">지역</label>
+                <label>지역</label>
                 <select>
                     <option>전체</option>
                     <option selected>서울특별시</option>
@@ -86,16 +89,16 @@
                     <option selected>홍길동</option>
                 </select>
             </div>     
-                
-            <div class="form-group">     
-                <!-- 소속회사 -->
-                <label for="txt-na" class="form-text">소속회사</label>
-                <input type="text" value="" id="txt-na" name="una" placeholder="소속회사를 입력하세요">
+            
+            <!-- 소속회사 -->
+            <div class="form-group">                    
+                <label>소속회사</label>
+                <input type="text" value=""  name="una" placeholder="소속회사를 입력하세요">
             </div>     
- 
+            
+            <!-- 전문분야 -->
             <div class="form-group">     
-                <!-- 전문분야 -->
-                <label class="form-text">전문분야</label>
+                <label>전문분야</label>
                     
                     <input type="checkbox" id="physicalPlus" value="physicalPlus" name="field" placeholder="" checked="checked">
                     <label for="physicalPlus">기초체력 향상</label>
@@ -115,25 +118,30 @@
                     <input type="checkbox" id="rehabilitation" value="rehabilitation" name="field" placeholder="">
                     <label for="rehabilitation">재활</label>
 
-            </div>     
-            <div class="form-group">     
-                <!-- 수상경력 -->
-                <label for="txt-intro" class="form-text">수상경력</label>
-                <textarea name="memo2" id="txt-intro"></textarea>
-            </div>     
-            <div class="form-group">     
-                <!-- 가격 -->
-                <label for="txt-intro" class="form-text">가격</label>
-                <textarea name="memo2" id="txt-intro"></textarea>
+            </div>   
+            
+            <!-- 수상경력 -->
+            <div>     
+                <label >수상경력</label>
+                <textarea name=""></textarea>
             </div>     
 
-            <div class="form-group">     
-                <!-- 자기소개 -->
-                <label for="txt-intro" class="form-text">자기소개</label>
-                <textarea name="memo2" id="txt-intro"></textarea>
+
+            <!-- 가격 -->
+            <div>     
+                <label>가격</label>
+                <textarea name=""></textarea>
             </div>     
+
+            <!-- 자기소개 -->
+            <div>     
+                <label>자기소개</label>
+                <textarea name=""></textarea>
+            </div>     
+
+
+            <!-- 버튼 -->
             <div class="last">     
-                <!-- 버튼 -->
                 <button type="submit">등록</button>
                 <button type="reset">초기화</button>
             </div>     
@@ -175,15 +183,6 @@
     </footer>
     <!-- footer가 필요한 페이지에서 사용 -->
 
-    <script type="text/javascript">
-        var swiper = new Swiper('#mainBanner', {
-            loop: true,
-            navigation: false,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false
-            }
-        });
-    </script>
+    
 </body>
 </html>
