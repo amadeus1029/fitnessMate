@@ -14,7 +14,7 @@ div.imgPart {
     right: 0px;
     width: 60%;
     height: 740px;
-    background-image: url(../assets/image/signUp.jpg);
+    background-image: url('../../assets/image/signUp.jpg');
 }
 #container .signUpPart{
     width: 200px;
@@ -57,7 +57,7 @@ div.imgPart {
 .button-label:active {
     transform: translateY(2px);
 }
-input[type="checkbox"]:checked + label  {
+input[type="radio"]:checked + label  {
     background: #008526;
     color: #ffffff;
 }

@@ -146,6 +146,17 @@
   background-color: #fff;
   cursor: pointer;
 }
+.modal-btn-area .modal-confirm.main,
+.modal-btn-area .modal-cancel.main,
+.modal-btn-area .close-modal.main {
+  color: #cc2121;
+}
+.modal-btn-area .modal-confirm.off,
+.modal-btn-area .modal-cancel.off,
+.modal-btn-area .close-modal.off {
+  opacity: 0.5;
+  pointer-events: none;
+}
 /* import/variable { */
 .clearfix:after {
   content: '';
@@ -561,4 +572,63 @@ ul.user-list li.user p.info span.id {
 }
 #userInfoModal .modal-wrapper .modal-content .label-tab.on {
   display: block;
+}
+#addUserModal .modal-wrapper {
+  width: 360px;
+  padding: 0;
+}
+#addUserModal .modal-wrapper .modal-content {
+  padding: 20px;
+}
+#addUserModal .modal-wrapper .modal-content p.title {
+  color: #292c33;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+#addUserModal .modal-wrapper .modal-content .search-wrapper input[name='keyword'] {
+  float: left;
+  width: 200px;
+}
+#addUserModal .modal-wrapper .modal-content .search-wrapper button.search {
+  float: right;
+  margin: 0;
+  height: 30px;
+  min-width: 80px;
+  width: 80px;
+  line-height: 30px;
+  font-size: 16px;
+}
+#addUserModal .modal-wrapper .modal-content .search-result div.user {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #dadde6;
+  height: 80px;
+  padding: 10px 20px;
+}
+#addUserModal .modal-wrapper .modal-content .search-result div.user img {
+  float: left;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+#addUserModal .modal-wrapper .modal-content .search-result div.user p.info {
+  float: left;
+}
+#addUserModal .modal-wrapper .modal-content .search-result div.user p.info span.name {
+  display: block;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #292c33;
+}
+#addUserModal .modal-wrapper .modal-content .search-result div.user p.info span.id {
+  display: block;
+  line-height: 30px;
+  font-size: 16px;
+  color: #45474d;
 }

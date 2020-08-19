@@ -146,6 +146,17 @@
   background-color: #fff;
   cursor: pointer;
 }
+.modal-btn-area .modal-confirm.main,
+.modal-btn-area .modal-cancel.main,
+.modal-btn-area .close-modal.main {
+  color: #cc2121;
+}
+.modal-btn-area .modal-confirm.off,
+.modal-btn-area .modal-cancel.off,
+.modal-btn-area .close-modal.off {
+  opacity: 0.5;
+  pointer-events: none;
+}
 /* import/variable { */
 .clearfix:after {
   content: '';
@@ -485,7 +496,4 @@ ul.search-list li.search-result .content-area p.score {
 #searchIcon {
   font-size: 100px;
   color: red;
-}
-.modal-wrapper {
-  width: 380px;
 }
