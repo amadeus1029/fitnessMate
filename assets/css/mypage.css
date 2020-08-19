@@ -447,6 +447,13 @@ form#userSearchForm .radio-wrapper {
   float: left;
   margin-right: 30px;
 }
+form#userSearchForm input#searchKeyword {
+  float: left;
+}
+form#userSearchForm button#addUserBtn {
+  float: right;
+  margin: -10px 0 0 0;
+}
 ul.user-list {
   margin-top: 50px;
 }

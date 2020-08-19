@@ -122,6 +122,7 @@
                     <label for="formerMember" onclick="showUserList($(this));">이전회원</label>
                 </div>
                 <input type="text" id="searchKeyword" name="searchKeyword" placeholder="이름 혹은 아이디를 입력해주세요" onkeyup="searchByKeyword($(this));">
+                <button type="button" id="addUserBtn" class="button main" onclick="showAddUserModal();">회원 추가</button>
             </form>
             <ul class="user-list now clearfix">
                 <li class="user clearfix" onclick="showUser();">
@@ -264,6 +265,23 @@
             </div>
         </div>
     </div>
+    <div class="modal-layer" id="addUserModal">
+        <div class="modal-wrapper">
+            <button type="button" class="close-btn" onclick="forceHideModal('#userInfoModal')">X</button>
+            <div class="modal-content">
+                <form id="addUserForm">
+                    <p class="title">회원 추가</p>
+                    <div class="search-wrapper">
+
+                    </div>
+                </form>
+            </div>
+            <div class="modal-btn-area">
+                <button type="button" class="modal-cancel" onclick="forceHideModal('#addUserModal')">취소</button>
+                <button type="button" class="modal-confirm off" onclick="addUser();">추가</button>
+            </div>
+        </div>
+    </div>
     <!-- footer가 필요한 페이지에서 사용 -->
     <script type="text/javascript">
 
@@ -301,8 +319,14 @@
 
             $("span.name:contains('"+keyword+"')").parents("li").show();
             $("span.id:contains('"+keyword+"')").parents("li").show();
+        }
+        
+        function showAddUserModal() {
+            showModal("#addUserModal");
+        }
 
-
+        function addUser() {
+            forceHideModal('#addUserModal');
         }
     </script>
 </body>

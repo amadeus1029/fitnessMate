@@ -215,10 +215,22 @@ button.button.main {
   color: #cc2121;
   border: 1px solid #cc2121;
 }
+a.button.main:hover,
+button.button.main:hover {
+  color: #fff;
+  background-color: #cc2121;
+  transition: all 0.3s;
+}
 a.button.sub,
 button.button.sub {
   color: #008526;
   border: 1px solid #008526;
+}
+a.button.sub:hover,
+button.button.sub:hover {
+  color: #fff;
+  background-color: #008526;
+  transition: all 0.3s;
 }
 h3.title {
   font-size: 20px;
