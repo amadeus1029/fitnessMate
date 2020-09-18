@@ -24,6 +24,27 @@
 
     <!-- 해장 페이지 css -->
     <link rel="stylesheet" href="../assets/css/mypage.css">
+
+    <style>
+
+div.award-info div{
+    position: relative;
+    width: 50%;
+}
+div.award-info i.far{
+    font-size: 18px;
+    cursor: pointer;
+}
+div.award-info i.fa-minus-square {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+
+
+
+    </style>
+
 </head>
 <body>
     <header id="header">
@@ -175,11 +196,12 @@
                         </select>
                     </div>
                     <div class="award-info">
-                        <h3 class="title">입상경력</h3>
+                        <h3 class="title">입상경력 <i class="far fa-plus-square"></i></h3>
                         <span class="award">머슬마니아 3위</span>
                         <span class="award">전국체전 우수상</span>
                         <span class="award">체육관 개근상</span>
                         <span class="award">무사고 12년</span>
+                        
                     </div>
                 </div>
                 <div class="pay-wrapper">
@@ -224,4 +246,24 @@
     </footer>
     <!-- footer가 필요한 페이지에서 사용 -->
 </body>
+
+<script type="text/javascript">
+
+// +눌렀을 때 수상내역 추가
+$(".fa-plus-square").on("click", function(){
+    var addRecord = '';
+    addRecord += '<div>';
+    addRecord += '    <input type="text" name="careerRecord" placeholder="대회명(교육명) / 상세내용 ">';
+    addRecord += '    <i class="far fa-minus-square"></i>';
+    addRecord += '</div>';
+
+    $("div.award-info").append(addRecord);
+});
+// -눌렀을 때 수상내역 삭제
+$("div.award-info").on("click", "i.fa-minus-square",function(){
+    $(this).closest("div").remove();
+});
+
+</script>
+
 </html>

@@ -23,6 +23,7 @@
 }
 #container .wrapper form{
     position: relative;
+    height: 900px;
 }
 #container .wrapper form button#idCheck{
     position: absolute;
@@ -36,14 +37,13 @@
     height: 40px;
 }
 #container .wrapper form img{
+    float: left;
     width: 200px;
     height: 200px;
     margin: 15px 20px 20px 0px;
 }
 #container .wrapper form input[type="file"]{
-    position: absolute;
-    top: 843px;
-    right: 90px;
+    padding-top: 187px;
 }
 #container .wrapper a{
     width: 130px;

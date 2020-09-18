@@ -24,10 +24,28 @@
 
     <!-- 해당 페이지 css -->
     <link rel="stylesheet" href="../assets/css/mypage.css">
-    <style>
+<style>
 
+div.modal-layer div.modal-wrapper div.modal-content div.profile-wrapper{
+    padding: 0px;
+}
+div.modal-layer div.modal-wrapper div.modal-content div.profile-wrapper img{
+    float: left;
+    width: 400px;
+    height: 400px;
+}
+div.modal-layer div.modal-wrapper div.modal-content div.profile-wrapper div{
+    padding-left: 430px;
+    text-align: left;
+    line-height: 180%;
+}
+div.modal-layer div.modal-wrapper div.modal-content div.profile-wrapper div p.label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+}
 
-    </style>
+</style>
 
     <title>write record</title>
 
@@ -254,7 +272,24 @@
             </div>
             <div class="modal-content">
                 <div class="label-tab profile-wrapper on">
-                    프로필 내역이 들어옵니다
+                    <img src="../assets/image/face/LeeHyoRi.jpg" alt="profile image" title="profile image">
+                    <div>
+                        <p class="label">· 회원 이름</p>
+                        <p>&nbsp; 김회원 (male)</p>
+                        <p class="label">· ID</p>
+                        <p>&nbsp; id01</p>
+                        <p class="label">· 연락처</p>
+                        <p>&nbsp; 010-0000-0000</p>
+                        <p class="label">· 등록기간</p>
+                        <p>&nbsp; 2020/08/25 ~ 2020/09/25</p>
+                        <p class="label">· 잔여횟수</p>
+                        <p>&nbsp; 3 / 4</p>
+                        <form action="">
+                            <p class="label">· 메모</p>
+                            <textarea name="memo">메모메모메모</textarea>
+                            <button type="button">메모 수정</button>
+                        </form>
+                    </div>
                 </div>
                 <div class="label-tab inbody-wrapper">
                    인바디 내역이 들어옵니다

@@ -64,3 +64,24 @@ input[type="checkbox"]:checked + label {
     background: #008526;
     color: #ffffff;
 }
+#container .wrapper form div.recordPart{
+    width: 70%;
+    margin: 20px 0px 30px 0px;
+}
+#container .wrapper form div.recordPart p{
+    margin-bottom: 20px;
+}
+#container .wrapper form input[name="careerRecord"]{
+    width: 90%;
+    margin: 0px 0px 10px 0px;
+}
+#container .wrapper form div.recordPart>div{
+    position: relative;
+}
+#container .wrapper form i{
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
